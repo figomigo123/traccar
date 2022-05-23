@@ -1,0 +1,36 @@
+
+
+   <button 
+   class="btn btn-success" 
+   (click)="openNotitifacationsModal()"><i  nz-icon [nzType]="'file-add'" nzTheme="outline"></i></button>
+<nz-table #filterdData 
+[nzFrontPagination]="true"
+nzShowPagination
+#rowSelectionTable
+nzShowSizeChanger
+(nzPageIndexChange)="pageChange($event)"
+[nzData]="listOfData" [nzScroll]="{ x: listOfColumns.length * 11+'vw', y: '240px' }" >
+    <thead style="background:#164231!important" >
+      <tr >
+        <th></th>
+      <th    style="text-align: center;"  
+      *ngFor="let column of listOfColumns; let i = index" >
+      <p > {{column}}</p> 
+    </th>
+  </tr>
+
+    </thead>
+    <tbody>
+
+      <tr [nzAlign]='center' *ngFor="let data of filterdData.data; let i = index" style="text-align: center;">
+        <td [nzChecked]="this.PermissionData[i] != null ? this.PermissionData[i].id : false" (nzCheckedChange)="onItemChecked(data.id, $event)"></td>
+
+        <ng-container  *ngFor="let column of listOfColumns; let  y = index">
+          <td *ngIf="column != 'id'"  >{{ checkString(data[column])}}</td>
+
+        </ng-container>
+   
+      </tr>
+    </tbody>
+  </nz-table>
+

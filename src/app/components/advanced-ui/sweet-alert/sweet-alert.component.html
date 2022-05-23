@@ -1,0 +1,140 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Advanced UI</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Sweet-Alerts</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+
+<!-- Row -->
+<div class="row">
+	<div class="col-sm-6 col-md-6 col-lg-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+				<div>
+					<h6 class="main-content-label mb-1">Basic Alert</h6>
+					<p class="text-muted card-sub-title">A Basic Message</p>
+				</div>
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="basicAlert()">
+					Click me !
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Title alert</h6>
+					<p class="text-muted card-sub-title">A title with a text under</p>
+				</div>
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="titleAlert()">
+					Click me !
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Success alert</h6>
+					<p class="text-muted card-sub-title">A Success Message</p>
+				</div>
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="successAlert()">
+					Click me !
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Warning alert</h6>
+					<p class="text-muted card-sub-title">A warning message</p>
+				</div>
+
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="warningAlert()">
+					Click me !
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /row -->
+
+<!-- Row -->
+<div class="row">
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Passing a parameter alert</h6>
+					<p class="text-muted card-sub-title">By passing a parameter</p>
+				</div>
+
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="parameterAlert()">
+					Click me !
+				</button>
+
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Image alert</h6>
+					<p class="text-muted card-sub-title">A message with custom Image</p>
+				</div>
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="imageAlert()">
+					Click me !
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Timer alert</h6>
+					<p class="text-muted card-sub-title">A message with auto close timer</p>
+				</div>
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="timerAlert()">
+					Click me !
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card custom-card text-center">
+			<div class="card-body">
+
+				<div>
+					<h6 class="card-title mb-1">Animation Alert</h6>
+					<p class="text-muted card-sub-title">Custom animation with Animation.css</p>
+				</div>
+				<button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="animationAlert()">
+					Click me !
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- row closed -->

@@ -1,0 +1,170 @@
+::ng-deep{
+    
+    .main-navbar .nav-sub-item > .nav-sub{
+        left: 176px !important;
+        top: 0 !important;
+    }
+	.main-navbar .nav-sub-item + .nav-sub-item,
+    .main-navbar .nav-item + .nav-item,
+    .horizontalMenu > .horizontalMenu-list > li > a{
+        border: 0px dotted #000 !important;
+    }
+    
+    .horizontal-color .main-navbar .nav-sub-link,
+    .horizontal-gradient .main-navbar .nav-sub-link
+    {
+        color: #000 ;
+    }
+    .horizontal-color .main-navbar .nav-sub-item > .nav-sub-link.active,
+    .horizontal-gradient .main-navbar .nav-sub-item > .nav-sub-link.active
+    {
+        color: #fff !important;
+    }
+    .main-navbar{
+        padding: 0;
+        top: 70px !important;
+    }
+    @media (max-width:992px) {
+        .main-navbar{
+            top: 70px !important;
+        }
+    }
+    @media (min-width: 992px){
+        .main-navbar .nav-item + .nav-item {
+            border: 0 !important;
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+            border-left: none !important; 
+        }
+    }
+    @media (min-width: 1200px) and (max-width: 1477px){
+        .main-navbar li .nav-sub-item > .nav-sub {
+            left: 195px !important; 
+        }
+        .main-navbar li:nth-child(8) .nav-sub-item > .nav-sub {
+            left: -200px !important; 
+        }
+       
+        .main-navbar li .nav-sub  {
+            padding: 0 !important;
+
+            li a{
+                padding-left: 20px !important ;
+            }
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px){
+        .main-navbar li:nth-child(8) .nav-sub-item > .nav-sub {
+            left: -220px !important; 
+        }
+    }
+    .hor-menu.main-navbar .nav-link {
+        padding: 11px 0 !important;
+        height: 100%;
+    }
+    
+    @media (max-width:340px) {
+        .responsive-navbar.navbar .navbar-collapse{
+            padding-left: 0rem !important;
+        }
+        
+    }
+
+    
+    @media (min-width:992px) {
+        .main-navbar{
+            z-index: 98;
+        }
+    }
+
+    @media (min-width: 992px){
+        .main-navbar .nav-sub {
+            top:55px !important;
+            padding: 0 0 0 20px !important;
+        }
+    }   
+
+    .main-navbar .nav-link.with-sub::before{
+        top: 44px
+    }
+    .nav-item{
+        line-height: 2;
+    }
+
+    .nav-sub-link.with-sub.ng-star-inserted{
+        width: 110%;
+    }
+
+    @media (min-width:992px) {
+        .main-navbar .nav-sub-link.with-sub::after{
+            // margin-right: 20px;
+            position: absolute !important;
+            right: 20px;
+        }
+    }
+    @media (max-width:992px) {
+        .main-navbar .nav-sub-link.with-sub::after{
+            // margin-right: 20px;
+            position: absolute !important;
+            right: 40px;
+        }
+        .main-navbar .nav-link.with-sub::after{
+            position: absolute !important;
+            right: 20px !important;
+        }
+    }
+    .main-navbar .nav-item.show .nav-link::before{
+        display: none !important;
+    }
+
+    .side-header{
+        padding: 0 !important;
+    }
+
+
+
+    @media (min-width:992px) {
+        // .horizontalMenu > .horizontalMenu-list > li:nth-child(4):hover ul{
+        //     display: grid;
+        //     grid-template-columns: 1fr 1fr;
+        //     width: 300px;
+        // }
+        .horizontalMenu > .horizontalMenu-list > li.show   ul.nav-sub{
+            display: none !important;
+        }
+        .horizontalMenu > .horizontalMenu-list > li:hover > ul.nav-sub{
+            display: block !important;
+        }
+        
+        .horizontalMenu > .horizontalMenu-list > li:hover > ul.nav-sub li:hover ul.nav-sub{
+            display: block !important;
+        }
+        
+        .horizontalMenu > .horizontalMenu-list > li ul li{
+           padding-right: 10px !important;
+        }
+    }
+    @media  (min-width: 1200px){
+        .horizontalMenu > .horizontalMenu-list > li > a {
+            padding: 12px 14px !important;
+        }
+    }
+    @media (max-width:992px) {
+        .horizontalMenu > .horizontalMenu-list > li:hover > ul.nav-sub{
+            display: none !important;
+        }
+        .horizontalMenu > .horizontalMenu-list > li.show  > ul.nav-sub{
+            display: block !important;
+        }
+    }
+}
+
+
+.ps{
+    overflow: visible;
+}
+
+.main-navbar .nav-sub-item > .nav-sub-link.active{
+    color: #5965f9;
+}

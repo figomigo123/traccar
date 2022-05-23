@@ -1,0 +1,94 @@
+
+<!-- main-sidebar opened -->
+<!-- <div class="app-sidebar__overlay" data-toggle="sidebar"></div> -->
+<aside class="app-sidebar sidebar-scroll ">
+    <div class="main-sidebar-header">
+        <a class=" desktop-logo logo-light" routerLink="/dashboard"><img src="../../assets/img/brand/logo.png" class="main-logo" alt="logo"></a>
+        <a class=" desktop-logo logo-dark" routerLink="/dashboard"><img src="../../assets/img/brand/logo-white.png" class="main-logo dark-theme" alt="logo"></a>
+        <a class="logo-icon mobile-logo icon-light" routerLink="/dashboard"><img src="../../assets/img/brand/favicon.png" class="logo-icon" alt="logo"></a>
+        <a class="logo-icon mobile-logo icon-dark" routerLink="/dashboard"><img src="../../assets/img/brand/favicon-white.png" class="logo-icon dark-theme" alt="logo"></a>
+    </div>
+    <div class="main-sidebar-body circle-animation ">
+        
+        <ul class="side-menu circle">
+			<!-- 1st level Menu  -->
+			<li class="slide" *ngFor="let menuItem of menuItems" [ngClass]="{ active: menuItem.active ,'is-expanded': menuItem.active}">
+				<ng-container *ngIf="menuItem.headTitle">
+					<h3 class="side-item side-item-category">{{menuItem.headTitle}}</h3>
+				</ng-container>
+
+				<!-- link -->
+				<a class="side-menu__item" [routerLink]="!menuItem.type ? null : [menuItem.path]"
+					routerLinkActive="active" *ngIf="menuItem.type === 'link' " (click)="toggleNavActive(menuItem)">
+					<div class="side-menu__icon">
+						<i class="material-icons-two-tone {{menuItem.icon}}"></i>
+					</div>
+					<span class="side-menu__label">{{menuItem.title}}</span>
+					<span class="badge badge-{{menuItem.badgeType}} side-badge">{{menuItem.badgeValue}}</span>
+				</a>
+
+				<!-- sub -->
+				<a class="side-menu__item" [routerLink]="menuItem.type ? null: [menuItem.path]"
+					routerLinkActive="" *ngIf="menuItem.type === 'sub'" (click)="toggleNavActive(menuItem)">
+					<div class="side-menu__icon">
+						<i class="material-icons-two-tone {{menuItem.icon}}"></i>
+					</div>
+					<span class="side-menu__label">{{menuItem.title}}</span>
+                    <span class="badge badge-{{menuItem.badgeType}} side-badge mr-16" >{{menuItem.badgeValue}}</span>
+					<i class="angle fe fe-chevron-down"></i>
+				</a>
+
+
+				<!-- 2nd level menu -->
+				<ul class="slide-menu" *ngIf="menuItem.children" >
+					<li class="sub-slide" *ngFor="let childrenItem of menuItem.children" [ngClass]="{'is-expanded': childrenItem.active }">
+						<!-- link -->
+						<a class="slide-item" [routerLink]="!childrenItem.type ? null : [childrenItem.path]"
+							routerLinkActive="active" 
+							*ngIf="childrenItem.type === 'link' " (click)="toggleNavActive(menuItem)">
+							{{childrenItem.title}}
+						</a>
+						<!-- sub -->
+						<a class="slide-item" [routerLink]="childrenItem.type ? null: [childrenItem.path]"
+							routerLinkActive="" *ngIf="childrenItem.type === 'sub'"
+							(click)="toggleNavActive(childrenItem)">
+							<!-- {{childrenItem.title}}
+                            <i class="angle fe fe-chevron-down"></i> -->
+                            <span class="sub-side-menu__label">{{childrenItem.title}}</span>
+                            <i class="angle fe fe-chevron-right"></i>
+						</a>
+                        <!-- 3rd level menu -->
+                        <ul class="sub-slide-menu" *ngIf="childrenItem.children" [ngClass]="{'open': childrenItem.active}">
+                            <li class="sub-slide" *ngFor="let childrenSubItem of childrenItem.children"  >
+                                <!-- link -->
+                                <a class="sub-side-menu__item" [routerLink]="!childrenSubItem.type ? [childrenSubItem.path] : null"
+                                    routerLinkActive="active"  *ngIf="childrenSubItem.type === 'link' " (click)="toggleNavActive(childrenSubItem)">
+                                    {{childrenSubItem.title}}
+                                </a>
+                                <!-- sub -->
+                                <a class="sub-side-menu__item" [routerLink]="childrenSubItem.type ? null: [childrenSubItem.path]"
+                                    routerLinkActive="active" *ngIf="childrenSubItem.type === 'sub'"
+                                    (click)="toggleNavActive(childrenSubItem)">
+                                    <!-- {{childrenSubItem.title}}
+                                    <i class="angle fe fe-chevron-right"></i> -->
+                                    <span class="sub-side-menu__label">{{childrenSubItem.title}}</span>
+                                    <i class="angle fe fe-chevron-right"></i>
+                                </a>
+                                <!--4th level -->
+                                <ul class="sub-slide-menu" *ngIf="childrenSubItem.children" [ngClass]="{'show': childrenSubItem.active}">
+                                    <li *ngFor="let childrenSubItem1 of childrenSubItem.children">
+                                        <a class="sub-slide-item2" [routerLink]="!childrenSubItem1.type ? [childrenSubItem1.path] : null "
+                                        routerLinkActive="active" *ngIf="childrenSubItem1.type === 'link'">
+                                        {{childrenSubItem1.title}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+					</li>
+				</ul>
+
+			</li>
+		</ul>
+    </div>
+</aside>
+<!-- main-sidebar -->

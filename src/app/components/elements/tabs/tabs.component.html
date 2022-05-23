@@ -1,0 +1,453 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+<div class="my-auto">
+	<div class="d-flex">
+		<h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Tabs</span>
+	</div>
+</div>
+<div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+	<button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+		<i class="mdi mdi-download "></i>
+	</button>
+	<button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+		<i class="mdi mdi-clock"></i>
+	</button>
+	<button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+		<i class="mdi mdi-plus"></i>
+	</button>
+	<button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+</div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row opened -->
+<div class="row row-sm">
+<div class="col-lg-12 col-md-12">
+	<div class="card" id="basic-alert">
+		<div class="card-body">
+			<div>
+				<h6 class="card-title mb-1">Basic Style Tabs</h6>
+				<p class="text-muted card-sub-title">It is Very Easy to Customize and it uses in your website application.</p>
+			</div>
+			<div class="text-wrap">
+				<div class="example">
+					<div class="panel panel-primary tabs-style-1">
+						<div class=" tab-menu-heading">
+							<div class="tabs-menu1">
+								<ul ngbNav #nav="ngbNav" class="panel-tabs main-nav-line">
+									<li [ngbNavItem]>
+									<a ngbNavLink>Tab 01</a>
+									<ng-template ngbNavContent>
+										At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+									</ng-template>
+									</li>
+									<li [ngbNavItem]="2">
+									<a ngbNavLink>Tab 02</a>
+									<ng-template ngbNavContent>
+										<p>dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+										<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p>
+										<p class="mb-0">placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+									</ng-template>
+									</li>
+									<li [ngbNavItem]="3">
+									<a ngbNavLink>Tab 03</a>
+									<ng-template ngbNavContent>
+										<p>praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,</p>
+										<p class="mb-0">similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+									</ng-template>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel-body tabs-menu-body main-content-body-right border">
+							<div [ngbNavOutlet]="nav" class="tab-pane"></div>
+							<div class="tab-content"></div>
+						</div>
+					</div>
+				</div>
+                   <!-- Prism Precode -->
+				   <figure class="highlight clip-widget" id="tags1">
+					<ul ngbNav #nav1="ngbNav" class="nav-tabs">
+						<li [ngbNavItem]="1">
+							<a ngbNavLink>HTML</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="html1"></code></pre>
+								<div ngxClipboard [cbContent]="html1">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+						<li [ngbNavItem]="2">
+							<a ngbNavLink>TS</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="ts1"></code></pre>
+								<div ngxClipboard [cbContent]="ts1">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+					</ul>
+					<div [ngbNavOutlet]="nav1"></div>
+				</figure>
+				<!-- End Prism Precode -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-xl-12">
+	<!-- div -->
+	<div class="card mg-b-20" id="tabs-style2">
+		<div class="card-body">
+			<div class="main-content-label mg-b-5">
+				Basic Style2 Tabs
+			</div>
+			<p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+			<div class="text-wrap">
+				<div class="example">
+					<div class="panel panel-primary tabs-style-2">
+						<div class=" tab-menu-heading">
+							<div class="tabs-menu1">
+								<!-- Tabs -->
+								<ul ngbNav #nav2="ngbNav" class="panel-tabs main-nav-line">
+									<li [ngbNavItem]>
+									<a ngbNavLink>Tab 01</a>
+									<ng-template ngbNavContent>
+										At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+									</ng-template>
+									</li>
+									<li [ngbNavItem]="2">
+									<a ngbNavLink>Tab 02</a>
+									<ng-template ngbNavContent>
+										<p>dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+										<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p>
+										<p class="mb-0">placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+									</ng-template>
+									</li>
+									<li [ngbNavItem]="3">
+									<a ngbNavLink>Tab 03</a>
+									<ng-template ngbNavContent>
+										<p>praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,</p>
+										<p class="mb-0">similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+									</ng-template>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel-body tabs-menu-body main-content-body-right border">
+								<div [ngbNavOutlet]="nav2" class="tab-pane"></div>
+								<div class="tab-content"></div>
+						</div>
+					</div>
+				</div>
+                   <!-- Prism Precode -->
+				   <figure class="highlight clip-widget" id="tags12">
+					<ul ngbNav #nav12="ngbNav" class="nav-tabs">
+						<li [ngbNavItem]="1">
+							<a ngbNavLink>HTML</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="html12"></code></pre>
+								<div ngxClipboard [cbContent]="html12">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+						<li [ngbNavItem]="12">
+							<a ngbNavLink>TS</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="ts12"></code></pre>
+								<div ngxClipboard [cbContent]="ts12">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+					</ul>
+					<div [ngbNavOutlet]="nav12"></div>
+				</figure>
+				<!-- End Prism Precode -->
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- /div -->
+
+<div class="col-xl-12">
+	<!-- div -->
+	<div class="card mg-b-20" id="tabs-style3">
+		<div class="card-body">
+			<div class="main-content-label mg-b-5">
+				Basic Style3 Tabs
+			</div>
+			<p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+			<div class="text-wrap">
+				<div class="example">
+					<div class="panel panel-primary tabs-style-3">
+						<div class="tab-menu-heading">
+							<div class="tabs-menu ">
+								<ul ngbNav #nav3="ngbNav" class="panel-tabs">
+									<li [ngbNavItem]>
+									<a ngbNavLink><i class="fa fa-laptop"></i> Tab Style 01</a>
+									<ng-template ngbNavContent>
+										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+										<p class="mb-0">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>	
+									</ng-template>
+									</li>
+									<li [ngbNavItem]="2">
+									<a ngbNavLink><i class="fa fa-cube"></i> Tab Style 02</a>
+									<ng-template ngbNavContent>
+										<p> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+									<p class="mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+									</ng-template>
+									</li>
+									<li [ngbNavItem]="3">
+									<a ngbNavLink><i class="fa fa-cogs"></i> Tab Style 03</a>
+									<ng-template ngbNavContent>
+										<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</p>
+									<p class="mb-0">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+									</ng-template>
+									</li>
+									<li [ngbNavItem]="4">
+									<a ngbNavLink><i class="fa fa-tasks"></i> Tab Style 04</a>
+									<ng-template ngbNavContent>
+										<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</p>
+									<p class="mb-0">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus </p>
+									</ng-template>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel-body tabs-menu-body main-content-body-right border">
+							<div [ngbNavOutlet]="nav3" class="tab-pane"></div>
+								<div class="tab-content"></div>
+						</div>
+					</div>
+				</div>
+                   <!-- Prism Precode -->
+				   <figure class="highlight clip-widget" id="tags13">
+					<ul ngbNav #nav13="ngbNav" class="nav-tabs">
+						<li [ngbNavItem]="1">
+							<a ngbNavLink>HTML</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="html13"></code></pre>
+								<div ngxClipboard [cbContent]="html13">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+						<li [ngbNavItem]="2">
+							<a ngbNavLink>TS</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="ts13"></code></pre>
+								<div ngxClipboard [cbContent]="ts13">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+					</ul>
+					<div [ngbNavOutlet]="nav13"></div>
+				</figure>
+				<!-- End Prism Precode -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /div -->
+
+<div class="col-xl-12">
+	<!-- div -->
+	<div class="card" id="tabs-style4">
+		<div class="card-body">
+			<div class="main-content-label mg-b-5">
+				Vertical Tabs
+			</div>
+			<p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+			<div class="text-wrap">
+				<div class="example">
+					<div class="d-md-flex">
+						<div class="">
+							<div class="panel panel-primary tabs-style-4">
+								<div class="tab-menu-heading">
+									<div class="tabs-menu ">
+										<ul ngbNav #nav4="ngbNav" class="panel-tabs" orientation="vertical">
+											<li [ngbNavItem]>
+											<a ngbNavLink><i class="fa fa-laptop"></i> Tab Style 01</a>
+											<ng-template ngbNavContent>
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+												<p class="mb-0">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+											</ng-template>
+											</li>
+											<li [ngbNavItem]="2">
+											<a ngbNavLink><i class="fa fa-cube"></i> Tab Style 02</a>
+											<ng-template ngbNavContent>
+												<p> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+												<p> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+												<p class="mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+											</ng-template>
+											</li>
+											<li [ngbNavItem]="3">
+											<a ngbNavLink><i class="fa fa-cogs"></i> Tab Style 03</a>
+											<ng-template ngbNavContent>
+												<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+												<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+												<p class="mb-0">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+											</ng-template>
+											</li>
+											<li [ngbNavItem]="4">
+											<a ngbNavLink><i class="fa fa-tasks"></i> Tab Style 04</a>
+											<ng-template ngbNavContent>
+												<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+												<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+												<p class="mb-0">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus </p>
+											</ng-template>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs-style-4">
+								<div class="panel-body tabs-menu-body main-content-body-right border">
+									<div [ngbNavOutlet]="nav4" class="tab-pane"></div>
+										<div class="tab-content"></div>	
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Prism Precode -->
+				<figure class="highlight clip-widget" id="tags14">
+					<ul ngbNav #nav14="ngbNav" class="nav-tabs">
+						<li [ngbNavItem]="1">
+							<a ngbNavLink>HTML</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="html14"></code></pre>
+								<div ngxClipboard [cbContent]="html14">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+						<li [ngbNavItem]="2">
+							<a ngbNavLink>TS</a>
+							<ng-template ngbNavContent>
+								<pre><code [highlight]="ts14"></code></pre>
+								<div ngxClipboard [cbContent]="ts14">
+									<div class="clipboard-icon" container="body" placement="top"
+										ngbTooltip="Copy To Clipboard">
+										<i class="fa fa-clipboard"></i>
+									</div>
+								</div>
+							</ng-template>
+						</li>
+					</ul>
+					<div [ngbNavOutlet]="nav14"></div>
+				</figure>
+				<!-- End Prism Precode -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-xl-12">
+	<div class="card" id="tabs-style4">
+		<div class="card-body">
+			<div class="main-content-label mg-b-5">
+				Horizontal Tabs-right-side
+			</div>
+			<p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+			<div class="text-wrap">
+				<div class="example">
+					<div class="d-md-flex">
+						<div class="tab_wrapper">
+							<div class="tabs-style-4 content_wrapper ">
+								<div class="panel-body tabs-menu-body main-content-body-right border">
+									<div [ngbNavOutlet]="nav5" class="tab-pane"></div>
+									<div class="tab-content">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-primary tabs-style-4">
+							<div class="tab_wrapper right_tab">
+										<ul ngbNav #nav5="ngbNav"  class="nav panel-tabs mr-3" orientation="vertical">
+											<li ngbNavItem="1">
+											<a ngbNavLink>TAB  01</a>
+											<ng-template ngbNavContent>
+												<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+											</ng-template>
+											</li>
+											<li ngbNavItem="2">
+											<a ngbNavLink >TAB  02</a>
+											<ng-template ngbNavContent>
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+											</ng-template>
+											</li>
+											<li ngbNavItem="3">
+											<a ngbNavLink >TAB  03</a>
+											<ng-template ngbNavContent>
+												<p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents .</p>
+											</ng-template>
+											</li>
+										</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Prism Precode -->
+				<figure class="highlight clip-widget" id="tags15">
+				<ul ngbNav #nav15="ngbNav" class="nav-tabs">
+					<li [ngbNavItem]="1">
+						<a ngbNavLink>HTML</a>
+						<ng-template ngbNavContent>
+							<pre><code [highlight]="html15"></code></pre>
+							<div ngxClipboard [cbContent]="html15">
+								<div class="clipboard-icon" container="body" placement="top"
+									ngbTooltip="Copy To Clipboard">
+									<i class="fa fa-clipboard"></i>
+								</div>
+							</div>
+						</ng-template>
+					</li>
+					<li [ngbNavItem]="2">
+						<a ngbNavLink>TS</a>
+						<ng-template ngbNavContent>
+							<pre><code [highlight]="ts15"></code></pre>
+							<div ngxClipboard [cbContent]="ts15">
+								<div class="clipboard-icon" container="body" placement="top"
+									ngbTooltip="Copy To Clipboard">
+									<i class="fa fa-clipboard"></i>
+								</div>
+							</div>
+						</ng-template>
+					</li>
+				</ul>
+				<div [ngbNavOutlet]="nav15"></div>
+			</figure>
+			<!-- End Prism Precode -->
+
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /row -->

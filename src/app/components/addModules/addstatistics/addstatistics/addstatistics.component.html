@@ -1,0 +1,81 @@
+
+<div class="container">
+ 
+                <form [formGroup]="form" style="width: 100%;" autocomplete="off">
+                    <div class="row">
+                           
+
+                            <div class="col-4">
+                                                    
+                                <div class="input-group-lg">
+                                    <nz-date-picker
+                                    nzFormat="yyyy-MM-dd HH:mm:ss"
+                                        class="form-control" 
+                                        [nzSize]="'large'" 
+                                        nzPlaceHolder="Date From"
+                                        formControlName="from" 
+                                        id="name" ></nz-date-picker> 
+                                </div>                             
+                            </div>                
+                            <div class="col-4">
+                                                       
+                                <div class="input-group-lg">
+                                    <nz-date-picker
+                                    nzFormat="yyyy-MM-dd HH:mm:ss"
+                                    class="form-control" 
+                                    [nzSize]="'large'" 
+                                    nzPlaceHolder="Date To"
+                                    formControlName="to" 
+                                    id="name" ></nz-date-picker> 
+                                </div>                             
+                            </div>
+
+                     
+                  
+                
+                    <div class="col-2">
+                        <button 
+                            class="btn btn-block submit mb-2" 
+                           style="padding: 11px  7px 7px 7px;"
+                            matRipple 
+                            [disabled]="form.invalid"
+
+                            nz-button
+                            (click)="add()">
+                           Submit
+                        </button> 
+
+                    </div>    </div>
+                </form>
+            </div>
+    
+    
+<nz-table #filterdData 
+[nzFrontPagination]="true"
+nzShowPagination
+[nzPageSize]="10"
+#rowSelectionTable
+nzShowSizeChanger
+[nzData]="listOfData" [nzScroll]="{ x: listOfColumns.length * 11+'vw', y: '240px' }" >
+    <thead style="background:#164231!important" >
+      <tr >
+      <th    style="text-align: center;"  
+      *ngFor="let column of listOfColumns; let i = index">
+        {{column}}
+    </th>
+    <th nzRight="true">Actions</th>
+  </tr>
+
+    </thead>
+    <tbody>
+    
+      <tr [nzAlign]='center' *ngFor="let data of filterdData.data; let i = index" style="text-align: center;">
+        <ng-container  *ngFor="let column of listOfColumns; let  y = index">
+          <td  >{{ checkString(data[column])}}</td>
+
+        </ng-container>
+
+      </tr>
+    </tbody>
+  </nz-table>
+

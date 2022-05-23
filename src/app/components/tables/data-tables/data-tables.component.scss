@@ -1,0 +1,70 @@
+::ng-deep{
+    .datatable-body{
+        height: 600px !important;
+        overflow: scroll;
+        width: 100%;
+    }
+    input , select , input:focus , select:focus{
+        border: 1px solid #edecf7 !important;
+        outline: none;
+    }
+    .dataTable-sorter::before, .dataTable-sorter::after{
+        right: -12px !important;
+    }
+
+    .dataTable-pagination{
+        position: relative;
+        bottom: 0;
+    }
+    @media (max-width:502px) {
+        .dataTable-bottom{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dataTable-pagination li , .datatable-pager li{
+            width: 32px;
+        }
+
+        .datatable-footer-inner{
+            display: flex;flex-direction: column;
+        }
+        .ngx-datatable.material .datatable-footer .page-count{
+            line-height: initial;
+        }
+    }
+    
+    @media (max-width:414px) {
+        .dataTable-bottom{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dataTable-pagination li , .datatable-pager li{
+            width: 22px;
+        }
+
+        .datatable-footer-inner{
+            display: flex;flex-direction: column;
+        }
+        .ngx-datatable.material .datatable-footer .page-count{
+            line-height: initial;
+        }
+    }
+    @media (max-width:436px) {
+        .dataTable-top .dataTable-search{ 
+            float: left !important;
+        }
+    }
+
+    table thead th{
+        border-bottom: none !important;
+    }
+    .dataTable-container{
+    height: 100% !important;
+    width: 100%;
+    overflow: scroll;
+}
+}
+
+

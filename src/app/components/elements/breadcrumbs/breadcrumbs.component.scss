@@ -1,0 +1,13 @@
+::ng-deep{
+    .breadcrumb-item + .breadcrumb-item::before {
+        float: initial;
+    }
+    a{
+        color: #5965f9;
+    }
+    .hljs{
+        background: initial !important;
+        color: initial !important;
+    }
+    
+}

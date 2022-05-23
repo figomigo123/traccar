@@ -1,0 +1,70 @@
+::ng-deep{
+    .dropdown-menu{
+        z-index: 2 !important;
+    }
+
+    .btn-indigo {
+        color: #fff;
+        background-color: #ac50bb;
+        border-color: #ac50bb;
+    }
+
+    .btn-indigo:hover {
+        color: #fff;
+    }
+
+    .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled) {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    .btn-outline-secondary:hover {
+        color: #fff !important;
+        border-color: #007bff !important;
+        background-color: #007bff !important;
+    }
+    
+    .btn-outline-secondary{
+        border-color: #007bff !important;
+    }
+    .btn-outline-indigo {
+        border-color: #5965f9;
+    }
+
+    .btn-outline-light,
+    .btn-outline-light:hover,
+    .btn-outline-light:focus{
+        color: #212529 !important;
+    }
+    .btn-outline-dark:hover {
+        color: #fff !important;
+        
+    }
+    .hljs{
+        background: initial !important;
+        color: initial !important;
+    }
+}
+
+[class*=btn-outline-]:hover, [class*=btn-outline-]:focus{
+    color: #fff;
+}
+
+@media (max-width:575px) {
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .btn{
+        margin-top:5px;
+        margin-bottom: 5px;
+    }
+}
+
+.btn-warning{
+    color: #fff !important;
+    :hover{
+        color: #fff !important;
+    }
+}

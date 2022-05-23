@@ -1,0 +1,422 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Dropdowns</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="basic">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Basic Example</h6>
+                    <p class="text-muted card-sub-title">Wrap the dropdown’s toggle (your button or link) and the dropdown menu within .dropdown, or another element that declares position relative. Dropdowns can be triggered from link or button elements to better fit your potential needs.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div ngbDropdown>
+                            <button  class="btn ripple btn-primary"ngbDropdownToggle type="button">Dropdown Menu 
+                                <i class="fas fa-caret-down ml-1"></i>
+                            </button>
+                            <div  class=" tx-13" ngbDropdownMenu>
+                                <a ngbDropdownItem href="javascript:;">Action</a>
+                                <a ngbDropdownItem href="javascript:;">Another action</a>
+                                <a ngbDropdownItem href="javascript:;">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="dropdown1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="up">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Dropup</h6>
+                    <p class="text-muted card-sub-title">Trigger dropdown menus above elements by adding dropup class to the parent element.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div ngbDropdown [placement]="'top-left'" class="dropup">
+							<button class="btn ripple btn-secondary " ngbDropdownToggle type="button">Dropup Menu
+                                <i class="fas fa-caret-up ml-1"></i>
+							</button>
+							<div class="tx-13" ngbDropdownMenu>
+								<a ngbDropdownItem href="javascript:;">Action</a>
+								<a ngbDropdownItem href="javascript:;">Another action</a>
+								<a ngbDropdownItem href="javascript:;">Something else here</a>
+							</div>
+						</div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="dropdown2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="right">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Dropright & Dropleft</h6>
+                    <p class="text-muted card-sub-title">Trigger dropdown menus above elements by adding dropright & dropleft class to the parent element.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-xs">
+                            <div class="col-sm-6 col-md-3">
+                                <div ngbDropdown [placement]="'right-top'">
+                                    <button class="btn ripple btn-info " ngbDropdownToggle type="button">Dropright Menu
+                                        <i class="fas fa-caret-right ml-1"></i>
+                                    </button>
+                                    <div class="tx-13" ngbDropdownMenu>
+                                        <a ngbDropdownItem href="javascript:;">Action</a>
+                                        <a ngbDropdownItem href="javascript:;">Another action</a>
+                                        <a ngbDropdownItem href="javascript:;">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0">
+                                <div ngbDropdown [placement]="'left-top'" class="dropleft">
+                                    <button class="btn ripple btn-danger" id="dropvertical-menuButton" ngbDropdownToggle type="button">Dropleft Menu</button>
+                                    <div class="tx-13" ngbDropdownMenu>
+                                        <a ngbDropdownItem href="javascript:;">Action</a>
+                                        <a ngbDropdownItem href="javascript:;">Another action</a>
+                                        <a ngbDropdownItem href="javascript:;">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>	
+                        </div>
+                        
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="dropdown3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="3">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="active">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Active Menu Item</h6>
+                    <p class="text-muted card-sub-title">Add active class to items in the dropdown to style them as active.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div ngbDropdown>
+                            <button class="btn ripple btn-warning "  ngbDropdownToggle type="button">Dropdown Menu
+                                <i class="fas fa-caret-down ml-1"></i>
+                            </button>
+                            <div class="tx-13" ngbDropdownMenu>
+                                <a ngbDropdownItem class="" href="javascript:;">Action</a>
+                                <a ngbDropdownItem class="active" href="javascript:;">Another action</a>
+                                <a ngbDropdownItem class="" href="javascript:;">Something else here</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="dropdown4">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="4">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="disabled">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Disabled Menu Item</h6>
+                    <p class="text-muted card-sub-title">Add disabled class to items in the dropdown to style them as disabled.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div ngbDropdown>
+                            <button class="btn ripple btn-primary " ngbDropdownToggle type="button">Dropdown Menu
+                                <i class="fas fa-caret-down ml-1"></i>
+                            </button>
+                            <div class="tx-13" ngbDropdownMenu>
+                                <a class="dropdown-item" href="javascript:;">Action</a>
+                                <a class="dropdown-item disabled" href="javascript:;">Another action</a>
+                                <a class="dropdown-item" href="javascript:;">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="dropdown5">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="5">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="header">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Dropdown Header</h6>
+                    <p class="text-muted card-sub-title">Add a header to label sections of actions in any dropdown menu.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div ngbDropdown>
+                            <button class="btn ripple btn-secondary " ngbDropdownToggle type="button">Dropdown Menu
+                                <i class="fas fa-caret-down ml-1"></i>
+                            </button>
+                            <div class="tx-13" ngbDropdownMenu>
+                                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown
+                                    header</h6>
+                                <a class="dropdown-item" href="javascript:;">Action</a>
+                                <a class="dropdown-item" href="javascript:;">Another action</a>
+                                <a class="dropdown-item" href="javascript:;">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="dropdown6">
+                        <ul ngbNav #nav6="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="6">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html6"></code></pre>
+                                    <div ngxClipboard [cbContent]="html6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts6"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav6"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="divider">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Dropdown Divider</h6>
+                    <p class="text-muted card-sub-title">Separate groups of related menu items with a divider.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div ngbDropdown [placement]="'bottom-left'" >
+                            <button class="btn ripple btn-info " ngbDropdownToggle type="button">Dropdown Menu
+                                <i class="fas fa-caret-down ml-1"></i>
+                            </button>
+                            <div class="tx-13" ngbDropdownMenu>
+                                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown header</h6>
+                                <a class="dropdown-item" href="javascript:;">Action</a>
+                                <a class="dropdown-item" href="javascript:;">Another action</a>
+                                <a class="dropdown-item" href="javascript:;">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:;">Separated link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="dropdown7">
+                        <ul ngbNav #nav7="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="7">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html7"></code></pre>
+                                    <div ngxClipboard [cbContent]="html7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts7"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav7"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->

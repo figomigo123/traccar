@@ -1,0 +1,23 @@
+::ng-deep{
+    .notifier__notification--primary {
+        background-color: #5965f9 !important ;
+        color: #fff;
+    }
+
+    .notifier__notification.notifier__notification--opacity.notifier__notification--material{
+        background-color: #4b4261;
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    
+    .notifier__container .notifier__notification.notifier__notification--info.notifier__notification--material p.notifier__notification-message{
+        width: 150px !important;
+    }
+
+    .notifier__notification.notifier__notification--bgColor.notifier__notification--material{
+        background-color: #8500ff;
+        color: #fff;
+    }
+    
+}

@@ -1,0 +1,336 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Badge</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<!-- Row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card mg-b-20" id="badge">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Simple Badges
+                </div>
+                <p class="mg-b-20 text-muted card-sub-title">Badges scale to match the size of the immediate parent element by using relative font sizing and em units...</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <h1>Heading 1 <span class="badge badge-light">New</span></h1>
+                        <h2>Heading 2 <span class="badge badge-light">New</span></h2>
+                        <h3>Heading 3 <span class="badge badge-light">New</span></h3>
+                        <h4>Heading 4 <span class="badge badge-light">New</span></h4>
+                        <h5>Heading 5 <span class="badge badge-light">New</span></h5>
+                        <h6>Heading 6 <span class="badge badge-light">New</span></h6>
+                    </div>
+
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="badge1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card mg-b-20" id="badge1">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Colored Badges
+                </div>
+                <p class="mg-b-20 text-muted card-sub-title">Badges scale to match the size of the immediate parent element by using relative font sizing and em units...</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <h1 class="text-primary">Heading 1 <span class="badge badge-primary">New</span></h1>
+                        <h2 class="text-danger">Heading 2 <span class="badge badge-danger">New</span></h2>
+                        <h3 class="text-warning">Heading 3 <span class="badge badge-warning">New</span></h3>
+                        <h4 class="text-success">Heading 4 <span class="badge badge-success">New</span></h4>
+                        <h5 class="text-info">Heading 5 <span class="badge badge-info">New</span></h5>
+                        <h6 class="text-secondary">Heading 6 <span class="badge badge-secondary">New</span></h6>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="badge2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card mg-b-20" id="badge2">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    BADGES
+                </div>
+                <p class="mg-b-20 text-muted card-sub-title">Badges scale to match the size of the immediate parent element by using relative font sizing and em units...</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <span class="badge badge-primary mr-2">Primary</span>
+                        <span class="badge badge-secondary mr-2">Secondary</span>
+                        <span class="badge badge-success mr-2">Success</span>
+                        <span class="badge badge-danger mr-2">Danger</span>
+                        <span class="badge badge-warning mr-2">Warning</span>
+                        <span class="badge badge-info mr-2">Info</span>
+                        <span class="badge badge-light mr-2">Light</span>
+                        <span class="badge badge-dark mr-2">Dark</span>
+                    </div>
+
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="badge3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="3">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card mg-b-20" id="badge3">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Pill Badges
+                </div>
+                <p class="text-muted card-sub-title">Use the <code>.badge-pill</code> modifier class to make badges more rounded.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <span class="badge badge-pill badge-primary mr-2 mr-2">Primary</span>
+                        <span class="badge badge-pill badge-secondary mr-2 mr-2">Secondary</span>
+                        <span class="badge badge-pill badge-success mr-2 mr-2">Success</span>
+                        <span class="badge badge-pill badge-danger mr-2 mr-2">Danger</span>
+                        <span class="badge badge-pill badge-warning mr-2 mr-2">Warning</span>
+                        <span class="badge badge-pill badge-info mr-2 mr-2">Info</span>
+                        <span class="badge badge-pill badge-light mr-2 mr-2">Light</span>
+                        <span class="badge badge-pill badge-dark mr-2 mr-2">Dark</span>
+                    </div>
+
+                <!-- Prism Precode -->
+                <figure class="highlight clip-widget" id="badge4">
+                    <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                        <li [ngbNavItem]="4">
+                            <a ngbNavLink>HTML</a>
+                            <ng-template ngbNavContent>
+                                <pre><code [highlight]="html4"></code></pre>
+                                <div ngxClipboard [cbContent]="html4" >
+                                    <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                        <i class="fa fa-clipboard"></i>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                            <a ngbNavLink>TS</a>
+                            <ng-template ngbNavContent>
+                                <pre><code [highlight]="ts4"></code></pre>
+                                <div ngxClipboard [cbContent]="ts4" >
+                                    <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                        <i class="fa fa-clipboard"></i>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="nav4"></div>
+                </figure>
+                <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card mg-b-20" id="badge4">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Link Badges
+                </div>
+                <p class="mg-b-20 text-muted card-sub-title">Using the contextual badge classes on an element quickly provide actionable badges with hover and focus states.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <a class="badge badge-primary mr-2" href="javascript:;">Primary</a>
+                        <a class="badge badge-secondary  mr-2" href="javascript:;">Secondary</a>
+                        <a class="badge badge-success mr-2" href="javascript:;">Success</a>
+                        <a class="badge badge-danger mr-2" href="javascript:;">Danger</a>
+                        <a class="badge badge-warning mr-2" href="javascript:;">Warning</a>
+                        <a class="badge badge-info mr-2" href="javascript:;">Info</a>
+                        <a class="badge badge-light mr-2" href="javascript:;">Light</a>
+                        <a class="badge badge-dark mr-2" href="javascript:;">Dark</a>
+                    </div>
+
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="badge5">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="5">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card mg-b-20" id="badge5">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Link Badges
+                </div>
+                <p class="mg-b-20 text-muted card-sub-title">Badges can be used as part of links or buttons to provide a counter.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <button type="button" class="btn btn-primary mt-1 mb-1 mr-2">Primary <span class="badge badge-light">22</span></button>
+                        <button type="button" class="btn btn-success mt-1 mb-1 mr-2">Success <span class="badge badge-light">New</span></button>
+                        <button type="button" class="btn btn-info mt-1 mb-1 mr-2">Info <span class="badge badge-light">5</span></button>
+                        <button type="button" class="btn btn-warning mt-1 mb-1 mr-2">Warning <span class="badge badge-light badge-pill"><i class="typcn typcn-input-checked-outline tx-14"></i></span></button>
+                        <button type="button" class="btn btn-danger mt-1 mb-1 mr-2">Danger <span class="badge badge-light badge-pill">Updated</span></button>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="badge6">
+                        <ul ngbNav #nav6="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="6">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html6"></code></pre>
+                                    <div ngxClipboard [cbContent]="html6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts6"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav6"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->

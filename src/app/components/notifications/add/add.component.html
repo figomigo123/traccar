@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="form" style="width: 100%;" autocomplete="off">
+                          <ngb-accordion [closeOthers]="true" activeIds="required">
+                    <ngb-panel id="required" title="Required"  >
+                        <ng-template ngbPanelContent #test  >
+                  
+
+                        <div   *ngFor="let column of AllInputsInputs; let i = index;" class="col-md-12"   >
+                            <div *ngIf="check(column)" class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       {{column}}
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="text"
+                                        formControlName="{{column}}" 
+                                        id="{{column}}" />   
+                                </div>                             
+                            </div>                
+                        </div>
+                        </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel id="Extra" title="Extra"  >
+                            <ng-template ngbPanelContent #test  >
+                      
+    
+                            <div *ngFor="let column of AllInputsInputs; let i = index;" class="col-md-12"   >
+                                <div *ngIf="!check(column)" class="form-group mb-12">
+                                    <nz-form-label nzRequired>
+                                        <label for="name_en">
+                                           {{column}}
+                                        </label>
+                                    </nz-form-label>                            
+                                    <div class="input-group-lg">
+                                        <input  
+                                            class="form-control" 
+                                            nz-input 
+                                            type="text"
+                                            formControlName="{{column}}" 
+                                            id="{{column}}" />   
+                                    </div>                             
+                                </div>                
+                            </div>
+                            </ng-template>
+                            </ngb-panel>
+                        </ngb-accordion>              
+                  
+                
+                    <div class="col-md-6">
+                        <button 
+                            class="btn btn-block submit" 
+                            [class.btn-info]="!country"
+                            [class.btn-success]="country"
+                            matRipple 
+                            nz-button
+                            (click)="(country) ? edit() : add()">
+                            <i nz-icon nzType="loading" nzTheme="outline" *ngIf="isAdd"></i>
+                           Submit
+                        </button>       
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

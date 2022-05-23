@@ -1,0 +1,58 @@
+::ng-deep{
+    a{
+        text-decoration: none;
+    }
+    .modal{
+        z-index: 99992 !important;
+    }
+    .main-mail-compose-header .nav-link{
+        font-size: 1.5rem !important;
+    }
+    .btn-main-primary {
+        color: #fff;
+        background-color: #5965f9;
+        border-color: #5965f9;
+    }
+
+    .btn-main-primary:hover {
+        color: #fff;
+        background-color: #4e5af5;
+        border-color: #4e5af5;
+    }
+
+    .modal.show.modalCusSty .modal-dialog{
+        border-radius: 5px;
+        height: 520px;
+        width: 600px;
+        max-width: 100%;
+    }
+
+    @media (max-width:768px) {
+        .modal.show.modalCusSty .modal-dialog{
+            width: 90% !important;
+        }
+    }
+
+    @media (max-width:360px) {
+        .nav.mailLinks{
+            width: 180px;
+        }
+    }
+}
+
+
+.main-mail-compose-body{
+    padding: 0px !important;
+}
+.main-mail-compose-body .form-group{
+    border-bottom: 1px dotted #eaedf7;
+    padding-left: 5px ;
+}
+
+.modal-body{
+    padding: 10px !important;
+}
+
+.modal-title{
+    color: #fff;
+}

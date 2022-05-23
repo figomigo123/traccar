@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/app_styles.scss";
+@import "assets/css/icons.css";
+@import "assets/css/animate.css";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+@import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
+@import "~ng-zorro-antd/button/style/index.min.css"; 
+@import "~leaflet-draw/dist/leaflet.draw.css";
+@import "~leaflet-toolbar/dist/leaflet.toolbar.css";
+a{
+    text-decoration: none !important;
+}
+
+.btn:focus, .btn.focus , .form-control:focus , a:focus {
+    box-shadow: none !important;
+}
+body{
+    font-size : 0.876rem;
+    background: #e4e3ef !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.leaflet-popup-content-wrapper{
+width: 500px;
+}
+
+.popup-data{
+    color: cadetblue;
+font-size: 10pt;
+font-weight: bold;
+}
+
+.popup-lable{
+    color: rgb(56, 17, 194);
+font-size: 10pt;
+font-weight: bold;
+}
+
+.cdk-overlay-container, .cdk-overlay-pane {
+    z-index: 9999 !important;
+}

@@ -1,0 +1,296 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Media-object</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card" id="media-object">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Basic Example</h6>
+                    <p class="text-muted card-sub-title">It is Very Easy to Customize and it uses in your website application.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <img alt="" class="main-img-user avatar-lg mg-sm-r-20 mg-b-20 mg-sm-b-0" src="../../assets/img/faces/4.jpg">
+                            <div class="media-body">
+                                <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="media-object2">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Nesting</h6>
+                    <p class="text-muted card-sub-title">It is Very Easy to Customize and it uses in your website application.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <img alt="" class="main-img-user avatar-lg mg-sm-r-20 mg-b-20 mg-sm-b-0" src="../../assets/img/faces/9.jpg">
+                            <div class="media-body">
+                                <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                <p>Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                                <div class="media d-block d-sm-flex mg-t-25">
+                                    <img alt="" class="main-img-user avatar-lg mg-sm-r-20 mg-b-20 mg-sm-b-0" src="../../assets/img/faces/8.jpg">
+                                    <div class="media-body">
+                                        <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                        Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="media-object3">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Alignment</h6>
+                    <p class="text-muted card-sub-title">It is Very Easy to Customize and it uses in your website application.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <img alt="" class="main-img-user avatar-lg mg-sm-r-20 mg-b-20 mg-sm-b-0 align-self-center" src="../../assets/img/faces/14.jpg">
+                            <div class="media-body">
+                                <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="media-object4">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Order</h6>
+                    <p class="text-muted card-sub-title">It is Very Easy to Customize and it uses in your website application.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <div class="media-body">
+                                <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                            </div>
+                            <img alt="" class="main-img-user avatar-lg mg-sm-l-20 mg-t-20 mg-sm-t-0" src="../../assets/img/faces/5.jpg">
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media4">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="media-object5">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Media List</h6>
+                    <p class="text-muted card-sub-title">It is Very Easy to Customize and it uses in your website application.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media media-list d-block d-sm-flex">
+                            <ul class="list-unstyled mb-0">
+                                <li class="media d-block d-sm-flex">
+                                    <img alt="" class="main-img-user avatar-lg mg-sm-r-20 mg-b-20 mg-sm-b-0" src="../../assets/img/faces/2.jpg">
+                                    <div class="media-body">
+                                        <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                        Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                                    </div>
+                                </li>
+                                <li class="media d-block d-sm-flex mg-t-25">
+                                    <img alt="" class="main-img-user avatar-lg mg-sm-r-20 mg-b-20 mg-sm-b-0" src="../../assets/img/faces/12.jpg">
+                                    <div class="media-body">
+                                        <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                        Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                                    </div>
+                                </li>
+                                <li class="media d-block d-sm-flex mg-t-25">
+                                    <img alt="" class="main-img-user avatar-lg mg-sm-r-20 mg-b-20 mg-sm-b-0" src="../../assets/img/faces/7.jpg">
+                                    <div class="media-body">
+                                        <h5 class="mg-b-5 tx-inverse tx-15">Media heading</h5>
+                                        Lorem Ipsum generators on the Internet as necessary aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media5">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->

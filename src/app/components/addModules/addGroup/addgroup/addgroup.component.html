@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="form" style="width: 100%;" autocomplete="off">
+                    <div aria-multiselectable="true" class="accordion accordion-blue" id="accordion2" role="tablist">
+
+                    <ngb-accordion [closeOthers]="false"  activeIds="required">
+                        <ngb-panel id="required" title="Required"  >
+                            <ng-template ngbPanelContent  #test>
+                                <div class="form-group mb-12">
+                                    <nz-form-label nzRequired>
+                                        <label for="name_en">
+                                        Name
+                                        </label>
+                                    </nz-form-label>                            
+                                    <div class="input-group-lg">
+                                        <input  
+                                            class="form-control" 
+                                            nz-input 
+                                            type="text"
+                                            formControlName="name" 
+                                            id="name" />   
+                                    </div>                             
+                                </div>    
+                            </ng-template>
+                        </ngb-panel>
+                        <ngb-panel id="extra" title="Extra"  >
+                            <ng-template ngbPanelContent  #test>
+                                <div class="form-group mb-12">
+                                    <nz-form-label>
+                                        <label for="Group">
+                                            Group
+                                        </label>
+                                    </nz-form-label>                            
+                                    <div class="input-group-lg">
+                                        <nz-select 
+                                            style="width: 100%;" 
+                                            nzShowSearch 
+                                            nzAllowClear 
+                                            formControlName="groupId"
+                                            id="groupId"
+                                            [nzSize]="'large'">
+                                            <nz-option 
+                                                *ngFor="let data of AlllistOfData" 
+                                                [nzLabel]="data.name" 
+                                                [nzValue]="data.id"></nz-option>
+                                        </nz-select> 
+                                    </div>                             
+                                </div>    
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>     
+
+              
+                
+                    <div class="col-md-6">
+                        <button 
+                            class="btn btn-block submit" 
+                           
+                            matRipple 
+                            nz-button
+                            (click)="(country) ? edit() : add()">
+                            <!-- <i nz-icon nzType="loading" nzTheme="outline" *ngIf="isAdd"></i> -->
+                           Submit
+                        </button>       
+                    </div> 
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+

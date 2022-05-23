@@ -1,0 +1,780 @@
+<div class="card" style="background-color: #164231;">
+    <div class="card-body" style="padding-top: 0px;padding-bottom: 0px;">
+        <div class="breadcrumb-header justify-content-between">
+            <div class="left-content">
+
+                <div class="d-flex">
+                    <img src="../../../../assets/img/logo_white.png" style="width: 131px;height: 85px;">
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="row justify-content-center align-self-center mx-auto" > 
+
+                <div class="d-flex header-buttons">
+                    <div>
+                        <nz-badge [nzCount]="offlineDeviceCount " [nzOverflowCount]="10000" [nzShowZero]="idleDeviceCount == 0 ? true : false" style="margin-right: 24px;">
+
+                        <nz-avatar
+                        [nzGap]="'4'"
+
+                        [ngStyle]="{ 'background-color': 'red' ,'font-weight': '600' }"
+                        [nzText]="'offline'"
+                        [nzSize]="50"
+                        style="vertical-align: middle;"
+                      ></nz-avatar>
+                        </nz-badge>
+                        <nz-badge [nzCount]="onlineDeviceCount"[nzOverflowCount]="10000"  [nzShowZero]="idleDeviceCount == 0 ? true : false" style="margin-right: 24px;">
+
+                            <nz-avatar
+                            [nzGap]="'4'"
+    
+                            [ngStyle]="{ 'background-color': '#87d068' ,'font-weight': '600' }"
+                            [nzText]="'online'"
+                            [nzSize]="50"
+                            style="vertical-align: middle;"
+                          ></nz-avatar>
+                            </nz-badge>
+                            <nz-badge [nzCount]="idleDeviceCount" [nzOverflowCount]="10000" [nzShowZero]="idleDeviceCount == 0 ? true : false" style="margin-right: 24px;">
+
+                                <nz-avatar
+                                [nzGap]="'4'"
+        
+                                [ngStyle]="{ 'background-color': '#ffbf00' ,'font-weight': '600' }"
+                                [nzText]="'idle'"
+                                [nzSize]="50"
+                                style="vertical-align: middle;"
+                              ></nz-avatar>
+                                </nz-badge>
+                      
+                    </div>
+
+               
+                    <div ngbDropdown>
+                        <ul nz-menu nzMode="horizontal" style="width: 150px;border-radius: 31px;">
+                            <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"></ng-container>
+                            <ng-template #menuTpl let-menus>
+                              <ng-container *ngFor="let menu of menus; let i = index">
+                                <li
+                                  *ngIf="!menu.children"
+                                  nz-menu-item
+                                  [nzDisabled]="menu.disabled"
+                                  [nzSelected]="menu.selected"
+                                  (click)="openNotitifacationsModal(menu.modulename,i)"
+                                >
+                                  <i nz-icon [nzType]="menu.icon" *ngIf="menu.icon"></i>
+                                  <span>{{ menu.title }}</span>
+                                </li>
+                                <li
+                                  *ngIf="menu.children"
+                                  nz-submenu
+                                  [nzOpen]="menu.open"
+                                  [nzTitle]="menu.title"
+                                  [nzIcon]="menu.icon"
+
+                                  [nzDisabled]="menu.disabled"
+                                >
+                                  <ul>
+                                    <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menu.children }"></ng-container>
+                                  </ul>
+                                </li>
+                              </ng-container>
+                            </ng-template>
+                          </ul>
+                        <!-- <button class="btn ripple btn-light btn-block header-buttons" ngbDropdownToggle type="button">
+                            <i class="fas fa-cog"></i>
+                        </button> -->
+                 
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body card-body2">
+    
+
+                <div class="btn-icon-list">
+
+                     <div class="col-md-12" style="padding-top: 15px;padding-bottom: 15px;margin: auto;"> -->
+    
+                     <nz-input-group [nzSuffix]="suffixIconSearch">
+                            <input type="text" class="form-control" placeholder="Devices Search " [(ngModel)]="searchTxt"
+                            (ngModelChange)="FilterByTextGroups($event)">
+                                                  </nz-input-group>
+                          <ng-template #suffixIconSearch>
+                            <i nz-icon nzType="search"></i>
+                          </ng-template>
+                       
+                      
+                        <!-- <button [disabled]="selectedDevice == null" class="btn btn-light" (click)="deleteDevice()"><i
+                                class="typcn typcn-trash"></i></button>
+                        <button [disabled]="selectedDevice == null" class="btn btn-light"
+                            (click)="openEditDeviceModal(editdevice)"><i class="typcn typcn-edit"></i></button>
+                        <button class="btn btn-light"><i class="typcn typcn-plus"
+                                (click)="openDeviceModal(adddevice)"></i></button> -->
+  
+                    </div>
+                </div>
+            
+                  <div class="main-content-label mg-b-5 pb-2  mx-auto" style="padding-top: 60px !important;margin-top: 30px;">
+                    <button nz-button   (click)="openDeviceModal(adddevice)"  nzShape="round" style="background-color: teal;color: white;">
+                        <i nz-icon nzType="user-add"></i>
+                        Add Device
+                      </button>
+                      <button nz-button (click)="RefreshStatus()"    nzShape="round" style="background-color: #87d068;color: white;">
+                        <i nz-icon nzType="rotate-right"></i>
+                        Refresh
+                      </button>
+                      <button nz-button (click)="ShowGeofencesDrawer()"    nzShape="round" style="background-color: #c354d1;color: white;">
+                        <i nz-icon nzType="environment" nzTheme="fill"></i>
+                        Geofences
+                      </button>
+                </div>
+                <nz-tabset (nzSelectChange)="FilterGroups($event.tab.nzTitle) ">
+                    <nz-tab nzTitle="all" class="all">
+                     
+                    
+
+                    </nz-tab>
+                    <nz-tab nzTitle="online">
+                      
+                    </nz-tab>
+                    <nz-tab nzTitle="offline">
+                   
+
+                    </nz-tab>
+                    <nz-tab nzTitle="idle">
+                        
+                    </nz-tab>
+
+                  </nz-tabset>
+                <div class="main-content-label mg-b-5 pb-2" >
+                    Grouped Devices
+<!-- 
+                 <a style="float: right;" nz-dropdown [nzDropdownMenu]="menu">
+                        Open
+                        <i nz-icon nzType="down"></i>
+                      </a> 
+                      <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <ul  nz-menu>
+                            <li (click)="isOpen = false" nz-menu-item>Close</li>
+
+                          <li (click)="isOpen = true" nz-menu-item>Open</li>
+                        </ul>
+                      </nz-dropdown-menu> -->
+                      
+                </div>
+                <div *ngIf="isLoading">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <p-contextMenu #cm [model]="RighClickOnTree"></p-contextMenu>
+
+                <p-tree (onNodeExpand)="nodeExpand($event)" selectionMode="single" [(selection)]="selectedFile" [contextMenu]="cm" #tree [value]="groupsTree" scrollHeight="400px" [ngbCollapse]="false"  filterBy="label,status">
+
+                    <ng-template let-node pTemplate="device">
+                      <!-- //  <a [href]="node.data">{{node.label}}</a> -->
+
+                      <li
+                      
+                     
+                      (click)="selectDevice(node.devices)"
+                      [ngClass]="{'selectedDevice': selectedDevice === node.devices}" class="list-group-item"
+                      style="padding: 5px!important;margin-top: 6px;"
+                        
+                      >
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                            <svg id="svg4145" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+                            xmlns="http://www.w3.org/2000/svg" height="40" width="40"
+                             version="1.1" xmlns:cc="http://creativecommons.org/ns#"
+                              xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 40 40">
+                             <g id="layer1">
+                              <path id="background" d="m20.002 3.6816l-1.131 3.3907a12.374 12.374 0 0 1 1.131 -0.0625 12.374 12.374 0 0 1 1.129 0.0566l-1.129-3.3848zm-0.002 3.9434a12.374 12.374 0 0 0 -12.375 12.375 12.374 12.374 0 0 0 12.375 12.375 12.374 12.374 0 0 0 12.375 -12.375 12.374 12.374 0 0 0 -12.375 -12.375z" stroke="#333" stroke-width="1.9" 
+                               [ngClass]="node.devices.status == 'offline' ? 'stDeviceoffline' : node.devices.status == 'online' ? 'stDeviceOnline' : 'stDeviceIDLE'  "/>
+                              <circle id="icon" cx="20" cy="20" r="5.8251"/>
+                             </g>
+                            </svg>
+                      
+                            <style>
+                            .stDeviceoffline{
+                                  fill: #ff0000!important;
+                              }
+                              .stDeviceIDLE{
+                                  fill: #fbff00!important;
+                              }
+                              .stDeviceOnline{
+                                  fill: #00ff00!important;
+                              }
+                            </style>
+                        </div>
+
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span style="font-weight: bold;">
+                                        {{node.label}}
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                 
+                                      <nz-tag  [nzColor]="node.devices.status == 'offline' ? 'error' : node.devices.status == 'online' ? 'success' : 'warning'  ">
+                                        <span>{{node.devices.status == 'offline' ? 'Offline' : node.devices.status == 'online' ? 'Online' : 'IDLE' }}</span>
+                                      </nz-tag>
+                                    
+                                </div>
+                                <div class="col-md-4">
+                                  
+                                    <nz-avatar
+                                    [nzGap]="'4'"
+            
+                                    [ngStyle]="{ 'background-color': '#87d068','margin-right': '4px','line-height': '21px'  }"
+                                    [nzIcon]="'edit'"
+                                    (click)="openEditDeviceModal(editdevice,node.devices)"
+                                    [nzSize]="24"
+                                  ></nz-avatar>
+                                  <nz-avatar
+                                  [nzGap]="'4'"
+                                  (click)="deleteDevice(node.devices)"
+                                  [ngStyle]="{ 'background-color': 'red','line-height': '21px'  }"
+                                  [nzIcon]="'delete'"
+                                  [nzSize]="24"
+                                ></nz-avatar>
+
+                    </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                      </li>
+                       
+                    </ng-template>
+                    <ng-template let-node pTemplate="group">
+                        <b>{{node.label}}</b>
+                    </ng-template>
+
+                </p-tree>
+
+                <!-- <ul nz-menu nzMode="inline" >
+                    <ng-container *ngTemplateOutlet="menuTpll; context: { $implicit: groupsTree }"></ng-container>
+                    <ng-template #menuTpll let-groupsTree>
+                      <ng-container *ngFor="let menu of groupsTree">
+                        <li
+                          *ngIf="!menu.treeGroups && level != null"
+                          nz-menu-item
+                          [nzOpen]="isOpen"
+
+                          [nzPaddingLeft]="menu.level * 24"
+                        >
+                          <i nz-icon [nzType]="menu.icon" *ngIf="menu.icon"></i>
+                          <span>{{ menu.name }}</span>
+                        </li>
+                        <li
+                          *ngIf="menu.treeGroups && menu.devices.length == 0"
+                          nz-submenu
+                          [nzPaddingLeft]="menu.level * 24"
+                          [nzOpen]="isOpen"
+                          [nzTitle]="menu.name"
+                          [nzDisabled]="menu.disabled"
+                        >
+                        
+                          <ul>
+                            <ng-container *ngTemplateOutlet="menuTpll; context: { $implicit: menu.treeGroups }">
+
+                                
+                            </ng-container>
+                          </ul>
+                        <li
+                        *ngIf="menu.devices != null && menu.devices.length > 0"
+                        nz-submenu
+                        [nzPaddingLeft]="menu.level * 24"
+                        [nzOpen]="isOpen"
+                       
+                        [nzTitle]="menu.name"
+                        [nzDisabled]="menu.disabled"
+                      >
+                      
+                        <ul>
+                          
+                          <ng-container  *ngTemplateOutlet="devices; context: { $implicit:[] }">
+
+                          </ng-container>
+                          <ng-container  *ngTemplateOutlet="menuTpll; context: { $implicit: menu.treeGroups }">
+
+                        </ng-container>
+                        </ul>
+                      </li>
+                      <ng-template #devices let-devices>
+                        <ng-container *ngFor="let device of menu.devices;let index = i">
+                          <li
+                          [nzOpen]="isOpen"
+                         
+                          (click)="selectDevice(device)"
+                          [ngClass]="{'selectedDevice': selectedDevice === device}" class="list-group-item"
+                          style="padding: 5px!important;margin-top: 6px;height: 92px;"
+                            nz-menu-item
+                          >
+                          <div class="row g-0">
+                            <div class="col-md-3">
+                                <img *ngIf="device.category != null" src="assets/icons/{{device.category}}.svg">
+                            </div>
+
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span style="font-weight: bold;">
+                                            {{device.name}}
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                     
+                                          <nz-tag  [nzColor]="device.status == 'offline' ? 'error' : device.status == 'online' ? 'success' : 'warning'  ">
+                                            <span>{{device.status == 'offline' ? 'Offline' : device.status == 'online' ? 'Online' : 'IDLE' }}</span>
+                                          </nz-tag>
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                      
+                                        <nz-avatar
+                                        [nzGap]="'4'"
+                
+                                        [ngStyle]="{ 'background-color': '#87d068','margin-right': '4px','line-height': '21px'  }"
+                                        [nzIcon]="'edit'"
+                                        (click)="openEditDeviceModal(editdevice,device)"
+                                        [nzSize]="24"
+                                      ></nz-avatar>
+                                      <nz-avatar
+                                      [nzGap]="'4'"
+                                      (click)="deleteDevice(device)"
+                                      [ngStyle]="{ 'background-color': 'red','line-height': '21px'  }"
+                                      [nzIcon]="'delete'"
+                                      [nzSize]="24"
+                                    ></nz-avatar>
+
+                        </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                          </li>
+                          </ng-container>
+                          </ng-template>
+                      </ng-container>
+                    </ng-template>
+                
+                  </ul> -->
+
+                <!-- <div aria-multiselectable="true" class="accordion accordion-blue" id="accordion2" role="tablist">
+                    <ngb-accordion [closeOthers]="false">
+                        <ngb-panel *ngFor="let group of groups" title="{{group.name}}">
+                            <ng-template ngbPanelContent #test>
+                                <ul class="list-group">
+                                    <div *ngFor="let device of devices;">
+                                        <li *ngIf="device.groupId == group.id" (click)="showDeviceDetails(device)"
+                                            [ngClass]="{'selectedDevice': selectedDevice === device}"
+                                            class="list-group-item">
+                                            <div class="row g-0">
+                                                <div class="col-md-3">
+                                                    <img *ngIf="device.category != null"
+                                                        src="assets/icons/{{device.category}}.svg">
+
+                                                </div>
+
+                                                <div class="col-md-9">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <span style="font-weight: bold;">
+                                                                {{device.name}}
+                                                            </span>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-8">
+                                                            <span style="font-size: 12pt;"
+                                                                [ngStyle]="{'color':(device.status == 'unknown' ||device.status == 'offline'?'red':'green' ) }">
+                                                                {{device.status == "unknown"?"idle":device.status}}
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <button class="btn btn-block"
+                                                                (click)="showDeviceDetails(device)"><i
+                                                                    class="fa fa-edit"></i></button>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
+                </div> -->
+                <hr>
+                <!-- <div class="main-content-label mg-b-5 pb-2">
+                 <h5>Other Devices</h5>   
+                 <ul class="list-group" *ngIf="!isLoading">
+                    <div *ngFor="let device of this.otherDevices">
+                        <li *ngIf="device.groupId == 0 && device.status == 'unknown'" (click)="selectDevice(device)"
+                            [ngClass]="{'selectedDevice': selectedDevice === device}" class="list-group-item"
+                            style="padding: 5px!important;margin-top: 6px;">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <img *ngIf="device.category != null" src="assets/icons/{{device.category}}.svg">
+                                </div>
+
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <span style="font-weight: bold;">
+                                                {{device.name}}
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <nz-tag [nzColor]="'warning'  ">
+                                                <i nz-icon nzType="exclamation-circle"></i>
+                                                <span>IDLE</span>
+                                              </nz-tag>
+                                        </div>
+                                        <div class="col-md-4">
+                                          
+                                            <nz-avatar
+                                            [nzGap]="'4'"
+                    
+                                            [ngStyle]="{ 'background-color': '#87d068','margin-right': '4px','line-height': '21px'  }"
+                                            [nzIcon]="'edit'"
+                                            (click)="openEditDeviceModal(editdevice,device)"
+                                            [nzSize]="24"
+                                          ></nz-avatar>
+                                          <nz-avatar
+                                          [nzGap]="'4'"
+                                          (click)="deleteDevice(device)"
+                                          [ngStyle]="{ 'background-color': 'red','line-height': '21px'  }"
+                                          [nzIcon]="'delete'"
+                                          [nzSize]="24"
+                                        ></nz-avatar>
+
+                            </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li *ngIf="device.groupId == 0 && device.status == 'offline'"
+                        [ngClass]="{'selectedDevice': selectedDevice === device}" class="list-group-item"
+                        style="padding: 5px!important;margin-top: 6px;">
+                        <div class="row g-0">
+                            <div class="col-md-3">
+                                <img *ngIf="device.category != null" src="assets/icons/{{device.category}}.svg">
+                            </div>
+
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span style="font-weight: bold;">
+                                            {{device.name}}
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <nz-tag [nzColor]="'error'  ">
+                                            <i nz-icon nzType="close-circle"></i>
+                                            <span>offline</span>
+                                          </nz-tag>
+                                    </div>
+                                    <div class="col-md-4">
+                                      
+                                                    <nz-avatar
+                                                    [nzGap]="'4'"
+                            
+                                                    [ngStyle]="{ 'background-color': '#87d068','margin-right': '4px','line-height': '21px'  }"
+                                                    [nzIcon]="'edit'"
+                                                    (click)="openEditDeviceModal(editdevice,device)"
+                                                    [nzSize]="24"
+                                                  ></nz-avatar>
+                                                  <nz-avatar
+                                                  [nzGap]="'4'"
+                                                  (click)="deleteDevice(device)"
+                                                  [ngStyle]="{ 'background-color': 'red','line-height': '21px'  }"
+                                                  [nzIcon]="'delete'"
+                                                  [nzSize]="24"
+                                                ></nz-avatar>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li *ngIf="device.groupId == 0 && device.status == 'online'" (click)="selectDevice(device)"
+                    [ngClass]="{'selectedDevice': selectedDevice === device}" class="list-group-item"
+                    style="padding: 5px!important;margin-top: 6px;">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img *ngIf="device.category != null" src="assets/icons/{{device.category}}.svg">
+                        </div>
+
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span style="font-weight: bold;">
+                                        {{device.name}}
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <nz-tag [nzColor]="'success'  ">
+                                        <i nz-icon nzType="check-circle"></i>
+                                        <span>online</span>
+                                      </nz-tag>
+
+                                </div>
+                                <div class="col-md-4">
+                                  
+                                    <nz-avatar
+                                    [nzGap]="'4'"
+            
+                                    [ngStyle]="{ 'background-color': '#87d068','margin-right': '4px','line-height': '21px'  }"
+                                    [nzIcon]="'edit'"
+                                    (click)="openEditDeviceModal(editdevice,device)"
+                                    [nzSize]="24"
+                                  ></nz-avatar>
+                                  <nz-avatar
+                                  [nzGap]="'4'"
+                                  (click)="deleteDevice(device)"
+                                  [ngStyle]="{ 'background-color': 'red','line-height': '21px'  }"
+                                  [nzIcon]="'delete'"
+                                  [nzSize]="24"
+                                ></nz-avatar>
+
+                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                    </div>
+                </ul>
+
+                </div> -->
+               </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="card">
+            <div class="card-body card-body2">
+                <!-- <div class="ht-600" id="leaflet1" leaflet [leafletOptions]="options1"></div> -->
+                <app-map></app-map>
+            </div>
+        </div>
+    </div>
+    <div class="right-buttons">
+        <div class="my-floating-button" (click)="openEventModal()">
+            <span>Events</span>
+        </div>
+        <div class="my-floating-button" (click)="openReporModal()">
+            <span>Reports</span>
+        </div>
+        <div class="my-floating-button" (click)="openDashboard()">
+            <span>Dashboard</span>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #adddevice let-modal>
+    <form (submit)="addDevice($event)">
+        <div class="modal-body pd-20 pd-sm-40">
+            <button v class="close" aria-label="Close" (click)="$event.preventDefault();modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title mg-b-20">Add New Device</h5>
+            <hr>
+            <div aria-multiselectable="true" class="accordion accordion-blue" id="accordion2" role="tablist">
+                <ngb-accordion [closeOthers]="false" activeIds="required">
+                    <ngb-panel id="required" title="Required">
+                        <ng-template ngbPanelContent #test>
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"
+                                    id="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="identifier">Identifier</label>
+                                <input class="form-control" [(ngModel)]="identifier"
+                                    [ngModelOptions]="{standalone: true}" id="identifier" placeholder="Identifier"
+                                    type="text" required>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="extra" title="Extra">
+                        <ng-template ngbPanelContent #test>
+                            <div class="form-group">
+                                <label for="name">Group</label>
+                                <ng-select class="form-control" [(ngModel)]="group"
+                                    [ngModelOptions]="{standalone: true}" style="width: 100% !important;"
+                                    [searchable]="true" placeholder="All Groups">
+                                    <ng-option *ngFor="let group of groups" [value]="group.id">{{group.label}}
+                                    </ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input class="form-control" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"
+                                    id="phone" placeholder="Phone" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="model">Model</label>
+                                <input class="form-control" [(ngModel)]="model" [ngModelOptions]="{standalone: true}"
+                                    id="model" placeholder="Model" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact</label>
+                                <input class="form-control" [(ngModel)]="contact" [ngModelOptions]="{standalone: true}"
+                                    id="contact" placeholder="Contact" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <ng-select class="form-control" [(ngModel)]="category"
+                                    [ngModelOptions]="{standalone: true}" style="width: 100% !important;"
+                                    [searchable]="true" placeholder="All Categories">
+                                    <ng-option *ngFor="let category of categories" [value]="category.name"><img
+                                            src="assets/icons/{{category.name}}.svg">{{category.name}}</ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input [(ngModel)]="disabled"
+                                        [ngModelOptions]="{standalone: true}" type="checkbox"><span
+                                        class="tx-13">Disabled</span></label>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn ripple btn-danger btn-block"
+                        (click)="$event.preventDefault();modal.dismiss('Cross click')">Cancel</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn ripple btn-success btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+
+<ng-template #editdevice let-modal>
+    <form (submit)="editDevice($event)">
+        <div class="modal-body pd-20 pd-sm-40">
+            <button v class="close" aria-label="Close" (click)="$event.preventDefault();modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title mg-b-20">Edit Device</h5>
+            <hr>
+            <div aria-multiselectable="true" class="accordion accordion-blue" id="accordion2" role="tablist">
+                <ngb-accordion [closeOthers]="false" activeIds="required">
+                    <ngb-panel id="required" title="Required">
+                        <ng-template ngbPanelContent #test>
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"
+                                    id="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="identifier">Identifier</label>
+                                <input class="form-control" [(ngModel)]="identifier"
+                                    [ngModelOptions]="{standalone: true}" id="identifier" placeholder="Identifier"
+                                    type="text" required>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="extra" title="Extra">
+                        <ng-template ngbPanelContent #test>
+                            <div class="form-group">
+                                <label for="name">Group</label>
+                                <ng-select class="form-control" [(ngModel)]="group"
+                                    [ngModelOptions]="{standalone: true}" style="width: 100% !important;"
+                                    [searchable]="true" placeholder="All Groups">
+                                    <ng-option *ngFor="let group of groups" [value]="group.id">{{group.label}}
+                                    </ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input class="form-control" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"
+                                    id="phone" placeholder="Phone" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="model">Model</label>
+                                <input class="form-control" [(ngModel)]="model" [ngModelOptions]="{standalone: true}"
+                                    id="model" placeholder="Model" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact</label>
+                                <input class="form-control" [(ngModel)]="contact" [ngModelOptions]="{standalone: true}"
+                                    id="contact" placeholder="Contact" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <ng-select class="form-control" [(ngModel)]="category"
+                                    [ngModelOptions]="{standalone: true}" style="width: 100% !important;"
+                                    [searchable]="true" placeholder="All Categories">
+                                    <ng-option *ngFor="let category of categories" [value]="category.name"><img
+                                            src="assets/icons/{{category.name}}.svg">{{category.name}}</ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input [(ngModel)]="disabled"
+                                        [ngModelOptions]="{standalone: true}" type="checkbox"><span
+                                        class="tx-13">Disabled</span></label>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn ripple btn-danger btn-block"
+                        (click)="$event.preventDefault();modal.dismiss('Cross click')">Cancel</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn ripple btn-success btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+<app-geofences-drawer  (close)="GeofencesDrawer = !GeofencesDrawer" [visible]="GeofencesDrawer"></app-geofences-drawer>

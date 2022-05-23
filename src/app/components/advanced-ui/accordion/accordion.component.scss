@@ -1,0 +1,100 @@
+::ng-deep{
+    // .accordion .card-header button.collapsed {
+    //     color: #596882;
+    //     background-color: #eeedf7;
+    //     border-bottom-color: transparent;
+    //     font-weight: 500;
+    // }
+    // .accordion .card-header button {
+    //     color: #1c273c;
+    //     background-color: #eeedf7;
+    //     width: 100%;
+    //     text-align: left;
+    // }
+    
+    *{
+        text-decoration: none;
+    }
+
+    .accordion .card-header button.collapsed {
+        color: #596882;
+        background-color: #eeedf7;
+    }
+    
+    .accordion .card-header button {
+        color: #1c273c;
+        background-color: #eeedf7;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+    }
+    .accordion{
+        margin-bottom: 1.3rem;
+    }
+
+    .accordion.accordion-gray .card-header button.collapsed {
+        background-color: #8587a7;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .accordion.accordion-blue .card {
+        margin-bottom: 1.3rem;
+    }
+
+    .accordion.accordion-dark .card-header button.collapsed {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: #1c273c;
+    }
+    
+    .accordion.accordion-dark .card-header button, .accordion.accordion-gray .card-header button {
+        color: #1c273c;
+        background-color: #eeedf7;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+    }
+    .accordion.accordion-dark .card ,  .accordion.accordion-gray .card , .accordion.accordion-blue .card{
+        margin-bottom: 1.3rem;
+    }
+
+    .accordion.accordion-gray .card-header button.collapsed {
+        background-color: #8587a7;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .accordion.accordion-blue .card {
+        margin-bottom: 1.3rem;
+    }
+    
+    .accordion.accordion-blue .card-header button.collapsed,
+    .accordion.accordion-indigo .card-header button.collapsed
+    {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: #5965f9;
+    }
+    .accordion-blue .card-header a , .accordion-indigo .card-header a 
+    {
+        color: #5965f9;
+    }
+    
+    .accordion.accordion-blue .card-header button,
+    .accordion.accordion-indigo .card-header button {
+        color: #5965f9;
+        background-color: #eeedf7;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .btn.focus{
+        box-shadow: none;
+    }
+
+    .btn-link:focus , .btn-link:hover{
+        text-decoration: none;
+    }
+    .btn:focus, .btn.focus{
+        box-shadow: none;
+    }
+}
+

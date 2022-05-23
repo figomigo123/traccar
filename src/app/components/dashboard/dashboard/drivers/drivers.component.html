@@ -1,0 +1,99 @@
+<div class="body">
+    <div class="card">
+        <div class="card-body">
+            <div class="btn-icon-list">
+                <div style="padding-top: 15px;padding-bottom: 15px;margin: auto;">
+                    <button [disabled]="selectedDriver == null" class="btn btn-light" (click)="deleteDriver()"><i class="typcn typcn-trash"></i></button>
+                    <button [disabled]="selectedDriver == null" class="btn btn-light" (click)="openEditDriverModal(editDriverModal)"><i class="typcn typcn-edit"></i></button>
+                    <button class="btn btn-light"><i class="typcn typcn-plus" (click)="openAddDriverModal(addDriverModal)"></i></button>
+                </div>
+            </div>
+            <div class="main-content-label mg-b-5 pb-2" style="padding-top: 80px !important;">
+                Your Drivers
+            </div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <ul *ngIf="!isLoading" class="list-group">
+                <div *ngFor="let driver of drivers">
+                    <li (click)="selectDriver(driver)" [ngClass]="{'selectedDriver': selectedDriver === driver}" class="list-group-item">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <span style="font-weight: bold;">
+                                        {{driver.name}}
+                                    </span>
+                                </div>
+                            </div> 
+                        </div>                                       
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ng-template #addDriverModal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title">Add Driver</h6>
+        <button type="button" class="close" aria-label="Close" (click)="$event.preventDefault();modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <form (submit)="addDriver($event)">
+        <div class="modal-body pd-20 pd-sm-40">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="Identifier">Identifier</label>
+                <input class="form-control" [(ngModel)]="identifier" [ngModelOptions]="{standalone: true}" id="Identifier" placeholder="Identifier" type="text" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn ripple btn-danger btn-block" (click)="$event.preventDefault();modal.dismiss('Cross click')">Cancel</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn ripple btn-success btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+
+<ng-template #editDriverModal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title">Edit Driver</h6>
+        <button type="button" class="close" aria-label="Close" (click)="$event.preventDefault();modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <form (submit)="editDriver($event)">
+        <div class="modal-body pd-20 pd-sm-40">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="Identifier">Identifier</label>
+                <input class="form-control" [(ngModel)]="identifier" [ngModelOptions]="{standalone: true}" id="Identifier" placeholder="Name" type="text" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn ripple btn-danger btn-block" (click)="$event.preventDefault();modal.dismiss('Cross click')">Cancel</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn ripple btn-success btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>

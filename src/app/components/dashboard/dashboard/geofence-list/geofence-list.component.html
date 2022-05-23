@@ -1,0 +1,34 @@
+<div class="container" style="padding: 20px;">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="search" class="form-control" placeholder="Search">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-responsive">
+                <thead>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Descriptio</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let g of geofenceList; let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>{{g.name}}</td>
+                        <td>{{g.description}}</td>
+                        <td>
+                            <button class="btn btn-success" (click)="showOnMap(g)">Show</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="deleteGeofence(g)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12">
+      
+
+        <nz-table #filterdData 
+        *ngIf="eventList"
+        #rowSelectionTableد
+        [nzFrontPagination]="false"
+        [nzLoading]="eventList.data.length == 0"
+        [nzData]="eventList.data"  >
+            <thead>
+                <th>#</th>
+                <th>type</th>
+                <th>device Name</th>
+                <th>Date</th>
+            </thead>
+            <tr *ngFor="let e of filterdData.data; let i=index;">
+                <td>{{e.id}}</td>
+                <td>{{e.type == "deviceUnknown" ? "Idle" : e.type}}</td>
+                <td>{{e.dviceName}}</td>
+                <td>{{e.eventTime|date:"yyyy/MM/dd HH:mm:ss"}}</td>
+            </tr>
+        </nz-table>
+        <nz-pagination         *ngIf="eventList"
+        [(nzPageIndex)]="eventList.pageNo" 
+        (nzPageIndexChange)="nzPageIndexChange($event)" 
+        [nzPageSize]="eventList.size"  [nzTotal]="eventList.pages" [nzSize]="'small'" ></nz-pagination>
+    </div>
+</div>

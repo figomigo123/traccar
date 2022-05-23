@@ -1,0 +1,482 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Buttons</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card" id="button1">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Default Buttons
+                </div>
+                <p class="mg-b-20">Predefined button styles, each serving its own semantic purpose..</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-xs wd-xl-80p">
+                            <div class="col-sm-6 col-md-3">
+                                <button class="btn btn-primary btn-block">Primary</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0">
+                                <button class="btn btn-secondary btn-block">Secondary</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0">
+                                <button class="btn btn-success btn-block">Success</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0">
+                                <button class="btn btn-warning btn-block">Warning</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-danger btn-block">Danger</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-info btn-block">Info</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-light btn-block">Light</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-dark btn-block">Dark</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="buttons1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table main-table-reference mt-0 mb-0">
+                    <thead>
+                        <tr>
+                            <th class="wd-40p">Class Reference</th>
+                            <th class="wd-60p">Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="pd-0 bg-transparent">class="btn btn-[value]"</code></td>
+                            <td>primary | secondary | success | warning | danger | info | light | dark</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card" id="button2">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Outline Buttons
+                </div>
+                <p class="mg-b-20">Predefined button styles, each serving its own semantic purpose..</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-xs wd-xl-80p">
+                            <div class="col-sm-6 col-md-3">
+                                <button class="btn btn-outline-primary btn-block">Primary</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0">
+                                <button class="btn btn-outline-secondary btn-block">Secondary</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0">
+                                <button class="btn btn-outline-success btn-block">Success</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0">
+                                <button class="btn btn-outline-warning btn-block">Warning</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-outline-danger btn-block">Danger</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-outline-info btn-block">Info</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-outline-light btn-block">Light</button>
+                            </div>
+                            <div class="col-sm-6 col-md-3 mg-t-10">
+                                <button class="btn btn-outline-dark btn-block">Dark</button>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Prism Precode -->
+                        <figure class="highlight clip-widget" id="buttons2">
+                            <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                                <li [ngbNavItem]="1">
+                                    <a ngbNavLink>HTML</a>
+                                    <ng-template ngbNavContent>
+                                        <pre><code [highlight]="html2"></code></pre>
+                                        <div ngxClipboard [cbContent]="html2" >
+                                            <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                                <i class="fa fa-clipboard"></i>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </li>
+                                <li [ngbNavItem]="2">
+                                    <a ngbNavLink>TS</a>
+                                    <ng-template ngbNavContent>
+                                        <pre><code [highlight]="ts2"></code></pre>
+                                        <div ngxClipboard [cbContent]="ts2" >
+                                            <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                                <i class="fa fa-clipboard"></i>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </li>
+                            </ul>
+                            <div [ngbNavOutlet]="nav2"></div>
+                        </figure>
+                        <!-- End Prism Precode -->
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table main-table-reference mt-0 mb-0">
+                    <thead>
+                        <tr>
+                            <th class="wd-40p">Class Reference</th>
+                            <th class="wd-60p">Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="pd-0 bg-transparent">class="btn btn-outline-[value]"</code></td>
+                            <td> primary | secondary | success | warning | danger | info | light | dark</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card" id="button3">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    ROUNDED BUTTONS
+                </div>
+                <p class="mg-b-20">Predefined button styles, each serving its own semantic purpose..</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-xs wd-xl-80p">
+                            <div class="col-sm-6 col-md-3"><button class="btn btn-primary btn-rounded btn-block">Primary</button></div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0"><button class="btn btn-outline-indigo btn-rounded btn-block">Primary</button></div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"><button class="btn btn-secondary btn-rounded btn-block">Secondary</button></div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"><button class="btn btn-outline-secondary btn-rounded btn-block">Secondary</button></div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="buttons3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card" id="button4">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    BUTTON WITH ICONS
+                </div>
+                <p class="mg-b-20">A basic button with added icons...</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-xs wd-xl-80p">
+                            <div class="col-sm-6 col-md-3"><button class="btn btn-indigo btn-with-icon btn-block"><i class="typcn typcn-folder"></i> Folder</button></div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0"><button class="btn btn-primary btn-with-icon btn-block"><i class="typcn typcn-mail"></i> Mail</button></div>
+                            <div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"><button class="btn btn-success btn-with-icon btn-block"><i class="typcn typcn-edit"></i> Edit</button></div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="buttons3">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card" id="button5">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    ICON BUTTONS
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application....</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="btn-icon-list">
+                            <button class="btn btn-indigo btn-icon"><i class="typcn typcn-folder"></i></button>
+                            <button class="btn btn-primary btn-icon"><i class="typcn typcn-calendar-outline"></i></button>
+                            <button class="btn btn-success btn-icon"><i class="typcn typcn-document-add"></i></button>
+                            <button class="btn btn-info btn-icon"><i class="typcn typcn-arrow-back-outline"></i></button>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="buttons3">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card" id="button6">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    DROPDOWN BUTTONS
+                </div>
+                <p class="mg-b-20">A button variant for using only icons.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-xs wd-xl-80p">
+
+                            <div class="col-sm-6 col-md-3">
+                                <div ngbDropdown>
+                                    <button class="btn ripple btn-indigo btn-block" ngbDropdownToggle type="button">Dropdown
+                                        <i class="icon ion-ios-arrow-down tx-11 mg-l-3"></i>
+                                    </button>
+                                    <div class="tx-13" ngbDropdownMenu>
+                                        <a ngbDropdownItem href="javascript:;">Profile</a>
+                                        <a ngbDropdownItem href="javascript:;">Activity Logs</a>
+                                        <a ngbDropdownItem href="javascript:;">Account Settings</a>
+                                        <a ngbDropdownItem href="javascript:;">Logout</a>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                <div ngbDropdown >
+                                    <button class="btn ripple btn-primary btn-block" ngbDropdownToggle type="button">Dropdown
+                                        <i class="icon ion-ios-arrow-down tx-11 mg-l-3"></i>
+                                    </button>
+                                    <div class="tx-13" ngbDropdownMenu>
+                                        <a ngbDropdownItem href="javascript:;">Profile</a>
+                                        <a ngbDropdownItem href="javascript:;">Activity Logs</a>
+                                        <a ngbDropdownItem href="javascript:;">Account Settings</a>
+                                        <a ngbDropdownItem href="javascript:;">Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="buttons3">
+                        <ul ngbNav #nav6="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html6"></code></pre>
+                                    <div ngxClipboard [cbContent]="html6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts6"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav6"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card" id="button7">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Button Groups
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application..</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-sm">
+                            <div class="col-lg-4">
+                                <div aria-label="Basic example" class="btn-group" role="group">
+                                    <button class="btn btn-secondary pd-x-25 active" type="button">Left</button> <button class="btn btn-secondary pd-x-25" type="button">Center</button> <button class="btn btn-secondary pd-x-25" type="button">Right</button>
+                                </div>
+                            </div><!-- col-4 -->
+                            <div class="col-lg-2 mg-t-20 mg-lg-t-0">
+                                <div aria-label="Basic example" class="btn-group" role="group">
+                                    <button class="btn btn-secondary btn-icon active" type="button"><i class="typcn typcn-media-play-outline"></i></button> <button class="btn btn-secondary btn-icon" type="button"><i class="typcn typcn-media-pause-outline"></i></button> <button class="btn btn-secondary btn-icon" type="button"><i class="typcn typcn-media-stop-outline"></i></button>
+                                </div>
+                            </div><!-- col-2 -->
+                            <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+                                <div aria-label="Basic example" class="btn-group" role="group">
+                                    <button class="btn btn-indigo btn-icon active" type="button"><i class="typcn typcn-media-play-outline"></i></button> 
+                                    <button class="btn btn-indigo btn-icon" type="button"><i class="typcn typcn-media-pause-outline"></i></button> 
+                                    <button class="btn btn-indigo btn-icon" type="button"><i class="typcn typcn-media-stop-outline"></i></button>
+                                </div>
+                            </div><!-- col-4 -->
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="buttons3">
+                        <ul ngbNav #nav7="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html7"></code></pre>
+                                    <div ngxClipboard [cbContent]="html7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts7"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav7"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->

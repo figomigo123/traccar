@@ -1,0 +1,269 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Forms</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Form-Validation</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Required Input Validation
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+                <form [formGroup]="inputForm" (ngSubmit)="Submit()" novalidate>
+                    <div class="row row-sm">
+                        <div class="col-6">
+                            <div class=" form-group mg-b-0">
+                                <label class="form-label">Firstname: <span class="tx-danger">*</span>
+                                    <input class="form-control" formControlName="firstname" placeholder="Enter firstname"
+                                        [ngClass]="{'has-success': inputFormControl.firstname.valid}">
+                                </label>
+                                <div *ngIf="(inputFormControl.firstname.touched || submitted) && (inputFormControl.firstname.errors?.required)"
+                                    class="tx-danger">
+                                    <small>Firstname is required</small>
+                                </div>
+                                <div *ngIf="inputFormControl.firstname.errors?.pattern" class="tx-danger">
+                                    <small>Enter only characters</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label">Lastname: <span class="tx-danger">*</span>
+                                <!-- <input class="form-control" name="lastname" placeholder="Enter lastname" required="" type="text"> -->
+                                <input class="form-control" formControlName="lastname" placeholder="Enter lastname"
+                                        [ngClass]="{'has-success': inputFormControl.lastname.valid}">
+                                </label>
+                                <div *ngIf="(inputFormControl.lastname.touched || submitted) && (inputFormControl.lastname.errors?.required)"
+                                    class="tx-danger">
+                                    <small>Lastname is required</small>
+                                </div>
+                                <div *ngIf="inputFormControl.lastname.errors?.pattern" class="tx-danger">
+                                    <small>Enter only characters</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                           
+                            <button type="submit" class="btn btn-main-primary pd-x-20 mg-t-10"
+                            [disabled]="inputForm.pristine || inputForm.invalid">Validate Form</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Email Validation
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+                <form [formGroup]="emailForm" novalidate (ngSubmit)="emailSubmit()">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-8 form-group mg-b-0">
+                            <label class="form-label">Email: <span class="tx-danger">*</span>
+                                <input class="form-control " formControlName="email"
+                                    placeholder="Enter Email Id" [ngClass]="{'has-success': emailFormControl.email.valid}">
+                            </label>
+                            <div *ngIf="(emailFormControl.email.touched || submitted1) && (emailFormControl.email.errors?.required)"
+                                class="tx-danger">
+                                <small>Email Id is required</small>
+                            </div>
+                            <div *ngIf="emailFormControl.email.errors?.pattern" class="tx-danger">
+                                <small>Enter a valid mail id</small>
+                            </div>
+                        </div>
+                        <div class="mg-sm-l-10 mg-t-10 mg-sm-t-20">
+                            <button class="btn ripple btn-main-primary pd-x-20" type="submit">Validate Email</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Custom Checkbox/Radio Validation
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+               
+                <form [formGroup]="checkboxForm" (ngSubmit)="checkboxSubmit()" novalidate>
+                    <p class="mg-b-10">What is your favorite browser? <span class="tx-danger">*</span></p>
+                    <div class="row parsley-checkbox" id="cbWrapper form-group" formGroupName="myCheckboxGroup">
+                        <div class="col-xl-3">
+                            <label class="ckbox mg-b-5-f">
+                                <input type="checkbox" formControlName="checkBox1" id="checkBox1"><span>Firefox</span>
+                            </label>
+
+                        </div>
+                        <div class="col-xl-3">
+                            <label class="ckbox mg-b-5-f">
+                                <input type="checkbox" formControlName="checkBox2" id="checkBox2"><span>Chrome</span>
+                            </label>
+                        </div>
+                        <div class="col-xl-3">
+                            <label class="ckbox mg-b-5-f">
+                                <input type="checkbox" formControlName="checkBox3" id="checkBox3"><span>Safari</span>
+                            </label>
+                        </div>
+                        <div class="col-xl-3">
+                            <label class="ckbox">
+                                <input type="checkbox" formControlName="checkBox4" id="checkBox4"><span>Edge</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tx-danger" *ngIf="(checkboxForm.controls['myCheckboxGroup'].errors) && 
+                               checkboxForm.controls['myCheckboxGroup'].errors.requireOneCheckboxToBeChecked">
+                        <small>At least two checkbox is required to check</small>
+                    </div>
+                    <div class="mg-t-20">
+                        <button class="btn ripple btn-main-primary pd-x-20" type="submit" value="Submit">Validate
+                            Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Select2 Box Validation
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+                <form [formGroup]="selectForm" novalidate (ngSubmit)="selectSubmit()">
+                    <div class="d-sm-flex">
+                        <div class="parsley-select col-lg-9 col-md-8" id="slWrapper">
+                            <ng-select class="form-control" placeholder="Choose one" formControlName="selectform">
+                                <ng-option value="Firefox">Firefox</ng-option>
+                                <ng-option value="Chrome">Chrome</ng-option>
+                                <ng-option value="Safari">Safari</ng-option>
+                                <ng-option value="Opera">Opera</ng-option>
+                                <ng-option value="Internet Explorer">Internet Explorer</ng-option>
+                            </ng-select>
+
+                            <div *ngIf="(selectForm.controls['selectform'].touched || submitted) && (selectForm.controls['selectform'].errors?.required)"
+                                class="tx-danger">
+                                <small>Select is required</small>
+                            </div>
+                        </div>
+                        <div class="mg-sm-l-10 mg-t-10 mg-sm-t-0">
+                            <button class="btn ripple btn-main-primary pd-x-20" type="submit" value="5">Validate
+                                Form</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Custom Style Invalid Messages
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+                
+                 <form [formGroup]="basicForm" novalidate (ngSubmit)="formSubmit()" name="selectForm2">
+                    <div class="">
+                        <div class="d-md-flex mg-b-20">
+                            <div class="">
+                                <label>Firstname: <span class="tx-danger">*</span></label>
+                                <input class="form-control wd-xl-250" formControlName="fullName"
+                                    placeholder="Enter Full name"
+                                    [ngClass]="{'has-success': basicFormControl.fullName.valid}">
+                                <div *ngIf="(basicFormControl.fullName.touched || submitted) && (basicFormControl.fullName.errors?.required)"
+                                    class="tx-danger">
+                                    <small>Name is required</small>
+                                </div>
+                                <div *ngIf="basicFormControl.fullName.errors?.pattern" class="tx-danger">
+                                    <small>Enter only characters</small>
+                                </div>
+                            </div>
+                            <div class="mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Lastname: <span class="tx-danger">*</span></label>
+                                <input class="form-control wd-xl-250" formControlName="lastname"
+                                    placeholder="Enter Lastname"
+                                    [ngClass]="{'has-success': basicFormControl.lastname.valid}">
+                                <div *ngIf="(basicFormControl.lastname.touched || submitted) && (basicFormControl.lastname.errors?.required)"
+                                    class="tx-danger">
+                                    <small>Lastname is required</small>
+                                </div>
+                                <div *ngIf="basicFormControl.lastname.errors?.pattern" class="tx-danger">
+                                    <small>Enter only numbers</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mg-b-10">What is your favorite browser? <span class="tx-danger">*</span></p>
+                    <div class="parsley-checkbox wd-250 mg-b-0 form-group" formGroupName="myCheckboxGroup">
+                        <label class="ckbox mg-b-5">
+                            <input type="checkbox" formControlName="checkBox1" id="checkBox1"><span>Firefox</span>
+                        </label>
+                        <label class="ckbox mg-b-5">
+                            <input type="checkbox" formControlName="checkBox2" id="checkBox2"><span>Chrome</span>
+                        </label>
+                        <label class="ckbox mg-b-5">
+                            <input type="checkbox" formControlName="checkBox3" id="checkBox3"><span>Safari</span>
+                        </label>
+                        <label class="ckbox">
+                            <input type="checkbox" formControlName="checkBox4" id="checkBox4"><span>Edge</span>
+                        </label>
+                    </div>
+                    
+
+                    <div class="parsley-select wd-250 mg-t-30">
+                        <ng-select class="form-control  select2" placeholder="Choose one">
+                            <ng-option value="Firefox">Firefox</ng-option>
+                            <ng-option value="Chrome">Chrome</ng-option>
+                            <ng-option value="Safari">Safari</ng-option>
+                            <ng-option value="Opera">Opera</ng-option>
+                            <ng-option value="Internet Explorer">Internet Explorer</ng-option>
+                        </ng-select>
+
+                    </div>
+                    <div class="mg-t-30">
+                        <button class="btn ripple btn-main-primary pd-x-20 btn-block" type="submit">Validate Form</button>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div>
+</div>
+<!-- row closed -->

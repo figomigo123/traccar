@@ -1,0 +1,66 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Apps</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Notifications</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+ <div class="row"> 
+    <div class="col-md-12">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Notification Types
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in website application.</p>
+                <div class="example border-0 p-0">
+                    <div class="btn-list">
+                        <button (click)="OnPrimary()" class="btn btn-primary mg-t-5 mr-2">Primary</button>
+                        <button (click)="OnSuccess()" class="btn btn-success mg-t-5 mr-2">Success</button>
+                        <button (click)="OnError()" class="btn btn-danger mg-t-5 mr-2">Error</button>
+                        <button (click)="OnWarning()" class="btn btn-warning mg-t-5 mr-2">Warning</button>
+                        <button (click)="OnInfo()" class="btn btn-info mg-t-5 mr-2">Info</button>
+                        <button (click)="OnFixedError()" class="btn btn-danger mg-t-5 mr-2">Fixed Error</button>
+                        <button (click)="OnOpacity()" class="btn btn-dark mg-t-5 mr-2">Opacity</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="card mg-b-20"> 
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Notification Styles
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in website application.</p>
+                <div class="example border-0 p-0">
+                    <div class="btn-list">
+                        <button (click)="OnMultiple()" class="btn btn-primary mg-t-5 mr-2" >Mutiple lines</button>
+                        <button (click)="OnFade()" class="btn btn-primary mg-t-5 mr-2">Fade Animation</button>
+                        <button (click)="OnCustomeBg()" class="btn btn-primary mg-t-5 mr-2">Customize Background</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+    </div>
+</div> 
+
+
+					<notifier-container></notifier-container>

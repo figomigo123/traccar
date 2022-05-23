@@ -1,0 +1,28 @@
+::ng-deep{
+    .dropdown-toggle::after{
+        display: none;
+    }
+
+    .dropdown-toggle > a{
+        color: #007bff !important;
+    }
+    a:not([href]):not([tabindex]){
+        color: #007bff;
+    }
+    a:not([href]):not([tabindex]):hover{
+        color: #0056b3;
+    }
+
+    .dropdown-menu-right{
+        transform: translate(-150px , 24px) !important;
+    }
+
+    .dropdown-menu{
+        z-index: 1;
+    }
+}
+
+.card-header{
+    background-color: transparent !important;
+}
+

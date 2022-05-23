@@ -1,0 +1,30 @@
+::ng-deep {
+    .page-item.active .page-link {
+        color: #fff !important;
+        background-color: #5965f9 !important;
+        border-color: #5965f9 !important;
+    }
+    .page-item .page-link{
+        color:  #212529;
+    }
+
+    .pagination-dark .page-item .page-link {
+        color: #fff;
+        border: none;
+    }
+
+    .pagination-success .page-item.active .page-link {
+        background-color: #08c18d !important;
+        border-color: #08c18d !important;
+    }
+
+    .page-link{
+        display: flex;
+    }
+    .hljs{
+        background: initial !important;
+        color: initial !important;
+    }
+    
+}
+

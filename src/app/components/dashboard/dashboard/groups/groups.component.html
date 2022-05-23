@@ -1,0 +1,91 @@
+<div class="body">
+    <div class="card">
+        <div class="card-body">
+            <div class="btn-icon-list">
+                <div style="padding-top: 15px;padding-bottom: 15px;margin: auto;">
+                    <button [disabled]="selectedGroup == null" class="btn btn-light" (click)="deleteGroup()"><i class="typcn typcn-trash"></i></button>
+                    <button [disabled]="selectedGroup == null" class="btn btn-light" (click)="openEditGroupModal(editGroupModal)"><i class="typcn typcn-edit"></i></button>
+                    <button class="btn btn-light"><i class="typcn typcn-plus" (click)="openAddGroupModal(addGroupModal)"></i></button>
+                </div>
+            </div>
+            <div class="main-content-label mg-b-5 pb-2" style="padding-top: 80px !important;">
+                Your Groups
+            </div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <div class="skeleton" *ngIf="isLoading"></div>
+            <ul *ngIf="!isLoading" class="list-group">
+                <div *ngFor="let group of groups">
+                    <li (click)="selectGroup(group)" [ngClass]="{'selectedGroup': selectedGroup === group}" class="list-group-item">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <span style="font-weight: bold;">
+                                        {{group.name}}
+                                    </span>
+                                </div>
+                            </div> 
+                        </div>                                       
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ng-template #addGroupModal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title">Add Group</h6>
+        <button type="button" class="close" aria-label="Close" (click)="$event.preventDefault();modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <form (submit)="addGroup($event)">
+        <div class="modal-body pd-20 pd-sm-40">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn ripple btn-danger btn-block" (click)="$event.preventDefault();modal.dismiss('Cross click')">Cancel</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn ripple btn-success btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+
+<ng-template #editGroupModal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title">Edit Group</h6>
+        <button type="button" class="close" aria-label="Close" (click)="$event.preventDefault();modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <form (submit)="editGroup($event)">
+        <div class="modal-body pd-20 pd-sm-40">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn ripple btn-danger btn-block" (click)="$event.preventDefault();modal.dismiss('Cross click')">Cancel</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn ripple btn-success btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>

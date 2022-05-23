@@ -1,0 +1,35 @@
+<div class="card" *ngIf="router.url != '/dashboard'" style="background-color: #164231;margin-bottom: 10px;">
+    <div class="card-body" style="padding-top: 0px;padding-bottom: 0px;">
+        <div class="breadcrumb-header justify-content-between">
+            <div class="left-content">
+                <div class="d-flex">
+                    <button class="btn btn-light header-buttons" routerLink="/dashboard"><i class="fas fa-arrow-left"></i></button>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="d-flex header-buttons">
+                    <!-- <button class="btn btn-light header-buttons"><i class="fas fa-street-view"></i></button>
+                    <button class="btn btn-light header-buttons"><i class="fas fa-location-arrow"></i></button>
+                    <button class="btn btn-light header-buttons"><i class="fas fa-paw"></i></button>
+                    <button class="btn btn-light header-buttons"><i class="fas fa-crosshairs"></i></button> -->
+                    <div ngbDropdown>
+                        <button class="btn ripple btn-light btn-block header-buttons" ngbDropdownToggle type="button">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <div class="tx-13" ngbDropdownMenu>
+                            <a ngbDropdownItem href="javascript:;" routerLink="/dashboard/account"><i class="fas fa-user"></i> <span class="list-word">Account</span></a>
+                            <a ngbDropdownItem href="javascript:;" routerLink="/dashboard/groups"><i class="far fa-object-group"></i> <span class="list-word">Groups</span></a>
+                            <a ngbDropdownItem href="javascript:;" routerLink="/dashboard/drivers"><i class="fas fa-key"></i> <span class="list-word">Drivers</span></a>
+                            <a ngbDropdownItem href="javascript:;" routerLink="/dashboard/geofences"><i class="fas fa-street-view"></i> <span class="list-word">Geofences</span></a>
+                            <a ngbDropdownItem href="javascript:;"><i class="far fa-envelope"></i> <span class="list-word">Notifications</span></a>
+                            <a ngbDropdownItem href="javascript:;"><i class="far fa-calendar"></i> <span class="list-word">Calendars</span></a>
+                            <a ngbDropdownItem href="javascript:;"><i class="fas fa-upload"></i> <span class="list-word">Saved Commands</span></a>
+                            <a ngbDropdownItem href="javascript:;"><i class="fas fa-wrench"></i> <span class="list-word">Maintenance</span></a>
+                            <a ngbDropdownItem href="javascript:;"><i class="fas fa-sign-out-alt"></i> <span class="list-word">Logout</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

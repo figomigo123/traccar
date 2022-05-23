@@ -1,0 +1,17 @@
+::ng-deep{
+    .dropdown-toggle::after{
+        display: none;
+    }
+
+    .dropleft {
+        transform: translate(-150px , 30px) !important;
+    }
+
+    a{
+        text-decoration: none !important;
+    }
+
+    .tooltip , .dropdown-menu{
+        z-index: 2 !important;
+    }
+}

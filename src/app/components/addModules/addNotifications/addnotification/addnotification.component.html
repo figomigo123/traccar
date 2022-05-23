@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="form" style="width: 100%;" autocomplete="off">
+                          <ngb-accordion activeIds="required">
+                    <ngb-panel id="required" title="Required"  >
+                        <ng-template ngbPanelContent #test  >
+                  
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Types
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <nz-select
+                                    class="form-control" 
+                                    nzPlaceHolder="Please select"
+                                    formControlName="type" 
+                                    (ngModelChange)="typesSelect($event)"
+                                  >
+                                    <nz-option *ngFor="let item of types" [nzLabel]="item.type" [nzValue]="item.type"></nz-option>
+                                  </nz-select>  
+                                </div>                             
+                            </div>
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       All Devices
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        nz-input 
+                                        type="checkbox"
+                                        formControlName="always" 
+                                        id="name" />   
+                                </div>                             
+                            </div>       
+                            <div *ngIf="alarm" class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Alarms 
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <nz-select
+                                    class="form-control" 
+                                    nzMode="multiple"
+                                    nzPlaceHolder="Please select"
+                                    formControlName="attributes" 
+                                    [(ngModel)] = "alarmsValues"
+
+                                  >
+                                    <nz-option *ngFor="let item of alarmsData" [nzLabel]="item" [nzValue]="item"></nz-option>
+                                  </nz-select>  
+                                </div>                             
+                            </div>         
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Identifier
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <nz-select
+                                    class="form-control" 
+                                    nzMode="multiple"
+                                    nzPlaceHolder="Please select"
+                                    formControlName="notificators" 
+                                    [(ngModel)] = "listOfSelectedValues"
+
+                                  >
+                                    <nz-option *ngFor="let item of listOfOptions" [nzLabel]="item.type" [nzValue]="item.type"></nz-option>
+
+                                  </nz-select>  
+                                </div>                             
+                            </div>
+                        </ng-template>
+                        </ngb-panel>                    
+                        </ngb-accordion>              
+                  
+                
+                    <div class="col-md-6">
+                        <button 
+                            class="btn btn-block submit" 
+                           
+                            matRipple 
+                            nz-button
+                            (click)="(country) ? edit() : add()">
+                            <i nz-icon nzType="loading" nzTheme="outline" *ngIf="isAdd"></i>
+                           Submit
+                        </button>       
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

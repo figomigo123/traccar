@@ -1,0 +1,39 @@
+// .fas.fa-caret-down{
+//     display: none;
+// }
+
+::ng-deep{
+    .dropdown-menu{
+        z-index: 2 !important;
+    }
+    .hljs{
+        background: initial !important;
+        color: initial !important;
+    }
+    
+}
+
+@media (max-width:575px) {
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .btn{
+        margin-top:5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+}
+@media (max-width:452px) {
+        .dropdown-menu[x-placement^=right]{
+            transform: translate(27px, 45px) !important;
+        }
+        .dropdown-menu[x-placement^=left]{
+            transform: translate(-9px, 45px) !important;
+        }
+    }
+
+    .dropdown-toggle::after{
+        display: none;
+    }

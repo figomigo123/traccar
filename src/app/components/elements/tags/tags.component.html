@@ -1,0 +1,308 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Tags</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12">
+        <!-- div -->
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    DEFAULT TAG
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="tags">
+                            <span class="tag">First tag</span>
+                            <span class="tag">Second tag</span>
+                            <span class="tag">Third tag</span>
+                        </div>
+                    </div>
+
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <!--/div-->
+
+        <!--div-->
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Link Tag
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="tags">
+                            <span class="tag tag-rounded">First tag</span>
+                            <span class="tag tag-rounded">Second tag</span>
+                            <span class="tag tag-rounded">Third tag</span>
+                        </div>
+                    </div>
+
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <!--/div-->
+
+        <!--div-->
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Default Tags Addon
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="tags">
+                            <span class="tag tag-default">
+                                One
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                            <span class="tag tag-default">
+                                Two
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                            <span class="tag tag-default">
+                                Three
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                            <span class="tag tag-default">
+                                Four
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <!--/div-->
+
+        <!--div-->
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Colored tags
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="tags">
+                            <span class="tag tag-blue">Blue tag</span>
+                            <span class="tag tag-azure">Azure tag</span>
+                            <span class="tag tag-indigo">Indigo tag</span>
+                            <span class="tag tag-purple">Purple tag</span>
+                            <span class="tag tag-pink">Pink tag</span>
+                            <span class="tag tag-red">Red tag</span>
+                            <span class="tag tag-orange">Orange tag</span>
+                            <span class="tag tag-yellow">Yellow tag</span>
+                            <span class="tag tag-lime">Lime tag</span>
+                            <span class="tag tag-green">Green tag</span>
+                            <span class="tag tag-teal">Teal tag</span>
+                            <span class="tag tag-cyan">Cyan tag</span>
+                            <span class="tag tag-gray">Gray tag</span>
+                            <span class="tag tag-gray-dark">Dark gray tag</span>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags4">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <!--/div-->
+
+        <!--div-->
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Input Tags
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="form-group mb-0">
+                            <ng-select class="form-control" [items]="selectValues" [multiple]="true" [(ngModel)]="select">
+                                <ng-option *ngFor="let select of selectValues">{{select.label}}</ng-option>
+                            </ng-select>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags5">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/div-->
+</div>
+<!-- /row -->

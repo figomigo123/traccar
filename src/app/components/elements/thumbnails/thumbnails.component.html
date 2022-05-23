@@ -1,0 +1,333 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Thumbnails</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="thumb">
+            <div class="card-body ht-100p">
+                <div>
+                    <h6 class="card-title mb-1">Image Thumbnail</h6>
+                    <p class="text-muted card-sub-title">Images in Bootstrap are made responsive with .img-fluid. max-width: 100%; and height: auto; are applied to the image so that it scales with the parent element.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <img alt="Responsive image" class="img-thumbnail" src="../../assets/img/photos/9.jpg">
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <img alt="Responsive image" class="img-thumbnail" src="../../assets/img/photos/13.jpg">
+                            </div>
+                            <div class="col-6 col-md-3 mg-t-10 mg-sm-t-0">
+                                <img alt="Responsive image" class="img-thumbnail" src="../../assets/img/photos/14.jpg">
+                            </div>
+                            <div class="col-6 col-md-3 mg-t-10 mg-sm-t-0">
+                                <img alt="Responsive image" class="img-thumbnail" src="../../assets/img/photos/15.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="images2">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="aligning">
+            <div class="card-body ht-100p">
+                <div>
+                    <h6 class="card-title mb-1">Aligning Thumbnails</h6>
+                    <p class="text-muted card-sub-title">Align images with the helper float classes or text alignment classes.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="clearfix">
+                          <img src="../../assets/img/photos/10.jpg" class="float-sm-left wd-100p wd-sm-200" alt="img">
+                          <img src="../../assets/img/photos/11.jpg" class="float-sm-right wd-100p wd-sm-200 mg-t-10 mg-sm-t-0" alt="img">
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="aligning">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card" id="contentthumb">
+            <div class="card-body ht-100p">
+                <div>
+                    <h6 class="card-title mb-1">Custom content Thumbnails</h6>
+                    <p class="text-muted card-sub-title">Using the images in custom content thumbnails</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4">
+                                <div class="img-thumbnail">
+                                    <a href="javascript:;">
+                                        <img src="../../assets/img/photos/4.jpg" alt="thumb1" class="thumbimg wd-100p">
+                                    </a>
+                                    <div class="caption">
+                                        <h5>Thumbnail label</h5>
+                                        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="btn btn-list pl-0 pb-0">
+                                            <a href="javascript:;" class=" mb-2 btn-primary mr-2" role="button">Button</a>
+                                            <a href="javascript:;" class=" mb-2 btn-secondary" role="button">Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4">
+                                <div class="img-thumbnail">
+                                    <a href="javascript:;">
+                                        <img src="../../assets/img/photos/9.jpg" alt="thumb1" class="thumbimg  wd-100p">
+                                    </a>
+                                    <div class="caption">
+                                        <h5>Thumbnail label</h5>
+                                        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="btn btn-list pl-0 pb-0">
+                                            <a href="javascript:;" class=" mb-2 btn-primary mr-2" role="button">Button</a>
+                                            <a href="javascript:;" class=" mb-2 btn-secondary" role="button">Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4">
+                                <div class="img-thumbnail">
+                                    <a href="javascript:;">
+                                        <img src="../../assets/img/photos/8.jpg" alt="thumb1" class="thumbimg  wd-100p">
+                                    </a>
+                                    <div class="caption">
+                                        <h5>Thumbnail label</h5>
+                                        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="btn btn-list pl-0 pb-0">
+                                            <a href="javascript:;" class=" mb-2 btn-primary mr-2" role="button">Button</a>
+                                            <a href="javascript:;" class=" mb-2 btn-secondary" role="button">Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="contentthumb">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card" id="responsive">
+            <div class="card-body ht-100p">
+                <div>
+                    <h6 class="card-title mb-1">Responsive Thumbnails</h6>
+                    <p class="text-muted card-sub-title">Images in Bootstrap are made responsive with .img-fluid. max-width: 100%; and height: auto; are applied to the image so that it scales with the parent element.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div><img alt="Responsive image" class="img-fluid" src="../../assets/img/photos/7.jpg"></div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="contentthumb">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="card custom-card" id="background">
+                <div class="card-body ht-100p">
+                    <div>
+                        <h6 class="card-title mb-1">Background Image</h6>
+                        <p class="text-muted card-sub-title">Make image as background to your content using the helper or utilities classes.</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <figure class="pos-relative mg-b-0">
+                                <img alt="Responsive image" class="img-fit-cover" src="../../assets/img/photos/12.jpg">
+                                <figcaption class="pos-absolute a-0 pd-25 bg-black-5 tx-white-8">
+                                    <h6 class="tx-14 tx-sm-16 tx-white tx-semibold mg-b-15 mg-sm-b-20">What Does Royalty-Free Mean?</h6>
+                                    <p class="mg-b-0">Royalty free means you just need to pay for rights to use the item once per end product.
+                                    You don't need to pay additional or ongoing fees for each person who sees or uses it.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="background">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->

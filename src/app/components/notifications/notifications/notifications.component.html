@@ -1,0 +1,81 @@
+
+
+   <button 
+   class="btn btn-success" 
+   (click)="openNotitifacationsModal()"><i  nz-icon [nzType]="'file-add'" nzTheme="outline"></i></button>
+
+<nz-table #filterdData 
+[nzFrontPagination]="true"
+nzShowPagination
+#rowSelectionTable
+nzShowSizeChanger
+(nzPageIndexChange)="pageChange($event)"
+[nzData]="listOfData" [nzScroll]="{ x: listOfColumns.length * 11+'vw', y: '240px' }" >
+    <thead style="background:#164231!important" >
+      <tr >
+      <th    style="text-align: center;"  
+      *ngFor="let column of listOfColumns; let i = index" >
+      <p > {{column}}</p> 
+    </th>
+    <th nzRight="true">Actions</th>
+  </tr>
+
+    </thead>
+    <tbody>
+    
+      <tr [nzAlign]='center' *ngFor="let data of filterdData.data; let i = index" style="text-align: center;">
+        <ng-container  *ngFor="let column of listOfColumns; let  y = index">
+          <td *ngIf="column != 'id'"  >{{ checkString(data[column])}}</td>
+
+        </ng-container>
+        <td>
+          <button 
+              class="btn btn-success" 
+              (click)="edit(data)"><i nz-icon nzType="edit" nzTheme="outline"></i></button>
+          <button 
+              nz-popconfirm
+              nzPopconfirmTitle= "are you sure to delete this record?"
+              nzPopconfirmPlacement="top"
+              (nzOnConfirm)="delete(data, i)"
+              class="btn btn-danger" ><i nz-icon nzType="delete" nzTheme="outline"></i></button>     
+              
+              <ng-container *ngIf="classname == 'users'">
+
+                 <a  nz-dropdown [nzDropdownMenu]="menu">
+                        Permissions
+                        <i nz-icon nzType="down"></i>
+                      </a> 
+                      <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <ul  nz-menu>
+                          <li (click)="openPermissionsModal('maintenance',data.id)" nz-menu-item>maintenance</li>
+                          <li (click)="openPermissionsModal('geofences',data.id)" nz-menu-item>geofences</li>
+                          <li (click)="openPermissionsModal('notifications',data.id)" nz-menu-item>notifications</li>
+                          <li (click)="openPermissionsModal('calendars',data.id)" nz-menu-item>calendars</li>
+                          <li (click)="openPermissionsModal('groups',data.id)" nz-menu-item>groups</li>
+                          <li (click)="openPermissionsModal('devices',data.id)" nz-menu-item>devices</li>
+                          <li (click)="openPermissionsModal('drivers',data.id)" nz-menu-item>drivers</li>
+
+                        </ul>
+                      </nz-dropdown-menu> 
+                      </ng-container>
+                      <ng-container *ngIf="classname == 'groups'">
+
+                        <a  nz-dropdown [nzDropdownMenu]="menu">
+                               Permissions
+                               <i nz-icon nzType="down"></i>
+                             </a> 
+                             <nz-dropdown-menu #menu="nzDropdownMenu">
+                               <ul  nz-menu>
+                                 <li (click)="openPermissionsModal('geofences',data.id)" nz-menu-item>geofences</li>
+                                 <li (click)="openPermissionsModal('maintenance',data.id)" nz-menu-item>maintenance</li>
+                                 <li (click)="openPermissionsModal('notifications',data.id)" nz-menu-item>notifications</li>
+                                 <li (click)="openPermissionsModal('drivers',data.id)" nz-menu-item>drivers</li>
+       
+                               </ul>
+                             </nz-dropdown-menu> 
+                             </ng-container>
+      </td>  
+      </tr>
+    </tbody>
+  </nz-table>
+

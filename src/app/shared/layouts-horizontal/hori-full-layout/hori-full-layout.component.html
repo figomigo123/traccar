@@ -1,0 +1,34 @@
+<div class="main-body app sidebar-mini Light-mode">
+
+    <div class="page">
+
+        <!-- Header -->
+        <app-hori-header></app-hori-header>
+        <!-- /Header -->
+
+        <!-- Horizonatal menu-->
+        <!-- <app-horizontal-menu></app-horizontal-menu> -->
+        <!--End  Horizonatal menu-->
+
+        <!-- Main Content -->
+        <div class="main-content horizontal-content" (click)="clickonBody()">
+            <div class="container" >
+
+                <router-outlet></router-outlet>
+
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+        <!-- Footer -->
+        <!-- <app-footer></app-footer> -->
+        <!-- /Footer -->
+
+        <!-- Notification-sidebar -->
+        <app-notification-sidebar></app-notification-sidebar>
+        <!-- /Notification-sidebar -->
+        <!-- Footer closed -->
+        <app-tap-to-top></app-tap-to-top>
+    </div>
+
+</div>

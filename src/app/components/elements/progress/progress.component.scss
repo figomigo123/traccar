@@ -1,0 +1,18 @@
+.progress{
+    height: auto;
+}
+
+.hljs{
+    background: initial !important;
+    color: initial !important;
+}
+
+::ng-deep{
+    .bg-indigo {
+        background-color: #5965f9 ;
+    }
+    .large .progress-bar{
+        height: 100% !important;
+    }
+}
+

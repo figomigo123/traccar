@@ -1,0 +1,32 @@
+<div class="container" style="padding: 20px;">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <p>Geofence</p>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>
+                    Name
+                </label>
+                <input class="form-control" type="text" [(ngModel)]="name">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>
+                    Description
+                </label>
+                <textarea class="form-control" type="text" [(ngModel)]="description">
+                </textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <button class="btn btn-success"(click)="save()" >Save</button>
+        </div>
+        
+    </div>
+</div>

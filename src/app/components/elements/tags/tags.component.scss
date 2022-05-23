@@ -1,0 +1,27 @@
+::ng-deep{
+    .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value{
+        margin-right: 2px;
+        color: white;
+        background-color: #5965f9;
+        border-radius: 0px;
+        border: 1px solid #5965f9;
+    }
+    .ng-value-container .ng-value{
+        direction: rtl;
+    }
+}
+.ng-select, .ng-select div, .ng-select input, .ng-select span {
+    box-sizing: content-box !important;
+}
+.text-wrap .form-control
+{
+    width: 95% !important;
+    border: none;
+}
+
+.hljs{
+    background: initial !important;
+    color: initial !important;
+}
+
+

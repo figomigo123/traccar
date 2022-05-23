@@ -1,0 +1,51 @@
+<nz-drawer
+[nzClosable]="false"
+[nzVisible]="visible"
+[nzWidth]="600"
+nzPlacement="right"
+nzTitle="Geofences"
+(nzOnClose)="close()"
+>
+<ng-container *nzDrawerContent>
+
+    <nz-table #filterdData 
+nzShowPagination
+#rowSelectionTable
+nzShowSizeChanger
+[nzData]="geofenceList"  >
+    <thead style="background:#164231!important" >
+      <tr >
+        <th>#</th>
+        <th>Name</th>
+        <th>Descriptio</th>
+        <th></th>
+        <th></th>
+  </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let g of filterdData.data; let i = index;">
+            <td>{{i+1}}</td>
+            <td>{{g.name}}</td>
+            <td>{{g.description}}</td>
+            <td>
+                <button 
+                class="btn btn-success" 
+                (click)="showOnMap(g)"><i nz-icon nzType="environment" nzTheme="fill"></i></button>
+            </td>
+            <td>
+                <button 
+                nz-popconfirm
+                nzPopconfirmTitle= "are you sure to delete this record?"
+                nzPopconfirmPlacement="top"
+                (nzOnConfirm)="deleteGeofence(g)"
+                class="btn btn-danger" ><i nz-icon nzType="delete" nzTheme="outline"></i></button>                            
+            </td>
+        </tr>
+ 
+    </tbody>
+  </nz-table>
+
+   
+</ng-container>
+</nz-drawer>

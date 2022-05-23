@@ -1,0 +1,38 @@
+<div class="table-responsive" style="margin-top: 25px;">
+    <nz-table 
+        [nzFrontPagination]="false"
+        [nzData]="modules" 
+        [nzLoading]="loading"
+        [nzPageSize]="20"
+        [nzPageIndex]="1"
+        [nzScroll]="{ x: '240px' }"
+        style="overflow: hidden !important"
+        class="table forms-table table-striped table-bordered">
+        <thead>
+          <tr class="bg-light"> 
+            <th style="color: white;" *ngFor="let head of heads; let i = index">
+                {{head }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let allData of modules; let i = index">    
+                <td style="    vertical-align: middle;
+                font-family: none;
+                font-weight: bold;
+                font-size: 23px;" >{{ allData }}</td>                                                                                                                      
+                <td>
+                    <input type="file" (change)="onFileChange($event,i)" />
+                    <a class="dropdown-item" (click)="logout()">
+                        <i class="fa fa-power-off m-r-5 m-l-5"></i> Import</a></td>                                                                       
+                    <td>  <a class="dropdown-item" (click)="getdata(i)">
+                        <i class="fa fa-power-off m-r-5 m-l-5"></i> Export</a></td>             
+            </tr>   
+        </tbody>
+<div id="output">
+
+</div>
+                    
+    </nz-table>
+
+</div>

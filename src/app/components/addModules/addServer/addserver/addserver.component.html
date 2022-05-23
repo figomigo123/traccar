@@ -1,0 +1,265 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="form" style="width: 100%;" autocomplete="off">
+                          <ngb-accordion activeIds="required">
+                    <ngb-panel id="required" title="Required"  >
+                        <ng-template ngbPanelContent #test  >
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Map Layer
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <nz-select
+                                    class="form-control" 
+                                    nzPlaceHolder="Please select"
+                                    formControlName="map" 
+                                  >
+                                    <nz-option *ngFor="let item of types" [nzLabel]="item" [nzValue]="item"></nz-option>
+                                  </nz-select>  
+                                </div>                             
+                            </div>
+
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Bing Map Key
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="text"
+                                        formControlName="bingKey" 
+                                        id="name" />   
+                                </div>                             
+                            </div> 
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Custom Map
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="text"
+                                        formControlName="mapUrl" 
+                                        id="name" />   
+                                </div>                             
+                            </div> 
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Latitude
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="number"
+                                        formControlName="latitude" 
+                                        id="name" />   
+                                </div>                             
+                            </div> 
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Longitude
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="number"
+                                        formControlName="longitude" 
+                                        id="name" />   
+                                </div>                             
+                            </div> 
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       Zoom
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="number"
+                                        formControlName="zoom" 
+                                        id="name" />   
+                                </div>                             
+                            </div> 
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                       12-hour Format
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                    nz-input 
+                                    type="checkbox"
+                                    formControlName="twelveHourFormat" 
+                                    id="name" />    
+                                </div>                             
+                            </div>
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                        Force Settings
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                   
+                                    nz-input 
+                                    type="checkbox"
+                                    formControlName="forceSettings" 
+                                    id="name" />    
+                                </div>                             
+                            </div>
+                            
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                        Coordinate Formate
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <nz-select
+                                    class="form-control" 
+                                    nzPlaceHolder="Please select"
+                                    formControlName="coordinateFormat" 
+                                  >
+                                    <nz-option *ngFor="let item of Formates" [nzLabel]="item" [nzValue]="item"></nz-option>
+                                  </nz-select>  
+                                </div>                             
+                            </div>               
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                        POI Layer
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="text"
+
+                                        formControlName="poiLayer" 
+                                        id="start" />   
+                                </div>                             
+                            </div>
+
+                            <div class="form-group mb-12">
+                                <nz-form-label nzRequired>
+                                    <label for="name_en">
+                                        Announcement
+                                    </label>
+                                </nz-form-label>                            
+                                <div class="input-group-lg">
+                                    <input  
+                                        class="form-control" 
+                                        nz-input 
+                                        type="text"
+
+                                        formControlName="announcement" 
+                                        id="start" />   
+                                </div>                             
+                            </div>
+                        </ng-template>
+                        </ngb-panel>
+                        <ngb-panel id="extra" title="Extra"  >
+                            <ng-template ngbPanelContent  #test>
+                                <div class="form-group mb-12">
+                                    <nz-form-label nzRequired>
+                                        <label for="name_en">
+                                           Registration
+                                        </label>
+                                    </nz-form-label>                            
+                                    <div class="input-group-lg">
+                                        <input  
+                                        nz-input 
+                                        type="checkbox"
+                                        formControlName="registration" 
+                                        id="name" />    
+                                    </div>                             
+                                </div>
+                                <div class="form-group mb-12">
+                                    <nz-form-label nzRequired>
+                                        <label for="name_en">
+                                            Read Only
+                                        </label>
+                                    </nz-form-label>                            
+                                    <div class="input-group-lg">
+                                        <input  
+                                        nz-input 
+                                        type="checkbox"
+                                        formControlName="readonly" 
+                                        id="name" />    
+                                    </div>                             
+                                </div>
+                                <div class="form-group mb-12">
+                                    <nz-form-label nzRequired>
+                                        <label for="name_en">
+                                           Device ReadOnly
+                                        </label>
+                                    </nz-form-label>                            
+                                    <div class="input-group-lg">
+                                        <input  
+                                        nz-input 
+                                        type="checkbox"
+                                        formControlName="deviceReadonly" 
+                                        id="name" />    
+                                    </div>                             
+                                </div>
+
+
+                                <div class="form-group mb-12">
+                                    <nz-form-label nzRequired>
+                                        <label for="name_en">
+                                            Limit Commands
+                                        </label>
+                                    </nz-form-label>                            
+                                    <div class="input-group-lg">
+                                        <input  
+                                       
+                                        nz-input 
+                                        type="checkbox"
+                                        formControlName="limitCommands" 
+                                        id="name" />    
+                                    </div>                             
+                                </div>  
+                            </ng-template>
+                        </ngb-panel>
+                     
+                        </ngb-accordion>              
+                  
+                 
+                    <div class="col-md-6">
+                        <button 
+                            class="btn btn-block submit" 
+                           
+                            matRipple 
+                            nz-button
+                            (click)=" edit()">
+                            <i nz-icon nzType="loading" nzTheme="outline" *ngIf="isAdd"></i>
+                           Submit
+                        </button>       
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

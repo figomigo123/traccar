@@ -1,0 +1,35 @@
+::ng-deep{
+    .btn-main-primary {
+        color: #fff;
+        background-color: #5965f9;
+        border-color: #5965f9;
+    }
+    .ng-select, .ng-select div, .ng-select input, .ng-select span{
+        box-sizing: content-box !important;
+        font-size: 0.876rem;
+        padding-left: 3px;
+    }
+    .ng-select-container.ng-has-value{
+    z-index: 9 !important;
+    }
+    .dropdown-menu{
+        font-size: 0.876rem;
+        z-index: 2;
+    }
+}
+
+.row.row-sm.mg-b-20 .col-lg-4 .form-control,
+.form-control.ng-select
+{
+    width: 84% !important;
+    border: none;
+}
+
+.col-sm-3.mg-t-20.mg-sm-t-0{
+    margin-top: 26px;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+

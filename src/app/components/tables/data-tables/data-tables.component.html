@@ -1,0 +1,100 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Tables</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Data Tables</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<div class="row row-sm">
+	<div class="col-xl-12">
+		<div class="card">
+			<div class="card-header pb-0">
+				<div class="d-flex justify-content-between">
+					<h4 class="card-title mg-b-0">SIMPLE TABLE</h4>
+					<i class="mdi mdi-dots-horizontal text-gray"></i>
+				</div>
+				<p class="tx-12 tx-gray-500 mb-2">Example of Valex Simple Table. <a href="javascript:;">Learn more</a>
+				</p>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table text-md-nowrap" id="myTable1">
+						<thead>
+							<tr>
+								<th class="wd-15p border-bottom-0">First name</th>
+								<th class="wd-15p border-bottom-0">Last name</th>
+								<th class="wd-20p border-bottom-0">Position</th>
+								<th class="wd-15p border-bottom-0">Start date</th>
+								<th class="wd-10p border-bottom-0">Salary</th>
+								<th class="wd-25p border-bottom-0">E-mail</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let table of dataTable">
+								<td>{{table.firstName}}</td>
+								<td>{{table.lastName}}</td>
+								<td>{{table.position}}</td>
+								<td>{{table.startdate}}</td>
+								<td>{{table.salary  | currency:'USD':'symbol':'3.0-0'}}</td>
+								<td>{{table.email}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!--div-->
+	<div class="col-xl-12">
+		<div class="card mg-b-20">
+			<div class="card-header pb-0">
+				<div class="d-flex justify-content-between">
+					<h4 class="card-title mg-b-0">Ngx DataTable</h4>
+					<i class="mdi mdi-dots-horizontal text-gray"></i>
+				</div>
+				<p class="tx-12 tx-gray-500 mb-2">Ngx-DataTable using material theme DataTables.</p>
+			</div>
+			<div class="card-body">
+				
+				<ngx-datatable 
+						class="material"
+						[rows]="dataTable"
+						[rowHeight]="50"
+						columnMode="force"
+						[headerHeight]="50"
+						[footerHeight]="50"
+						
+						[scrollbarV]="true"
+						[scrollbarH]="false"
+						[summaryRow]="true"
+                    [summaryPosition]="'bottom'"
+                    >
+                    <ngx-datatable-column name="First Name" [width]="100" ></ngx-datatable-column>
+                    <ngx-datatable-column name="Last Name"  [width]="100"></ngx-datatable-column>
+                    <ngx-datatable-column name="Position"  [width]="100"></ngx-datatable-column>
+					<ngx-datatable-column name="Email"  [width]="100"></ngx-datatable-column>
+					
+                </ngx-datatable>
+			</div>
+		</div>
+	</div>
+	<!--/div-->
+</div>
+<!-- /row -->

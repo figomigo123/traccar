@@ -1,0 +1,140 @@
+<div class="container" style="padding: 20px;">
+    <div class="row">
+        <div class="col-md-4">
+            {{device.name}}
+        </div>
+
+        <div class="col-md-4" [ngStyle]="{'color':(device.status == 'unknown' || device.status =='offline')?'red':'green'}">
+            {{device.status == "unknown" ?"offline":device.status}}
+        </div>
+        <div class="col-md-4">
+            {{device.lastUpdate | date:"yyyy-MM-dd HH:mm:ss"}}
+        </div>
+        
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            Speed
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position? position['speed']:""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            protocol
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['protocol']:""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            Device Time
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?(position['deviceTime']| date:"yyyy-MM-dd HH:mm:ss"):""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            outdated 
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['outdated ']:""}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            valid 
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['valid ']:""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            latitude  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['latitude']:""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            longitude  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['longitude']:""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            altitude  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['altitude']:""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            speed  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['speed']:""}}
+        </div>
+    </div>
+
+    
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            course  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['course']:""}}
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            address  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['address']:""}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            accuracy  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['accuracy']:""}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" style="border: solid 1px;">
+            network  
+        </div>
+        <div class="col-md-8" style="border: solid 1px;" >
+            {{position?position['network']:""}}
+        </div>
+    </div>
+    <div class="row" *ngFor="let att of attributeKeyList">
+        <div class="col-md-4" style="border: solid 1px;">
+            {{att}} 
+        </div>
+        <div class="col-md-8" style="border: solid 1px;">
+            {{position.attributes[att]}}
+        </div>
+    </div>
+</div>

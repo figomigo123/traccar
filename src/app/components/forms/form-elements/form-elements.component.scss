@@ -1,0 +1,59 @@
+.card-body .row.row-sm .col-md-6 input {
+    outline: 0;
+    border: 0 solid #e3e4e9;
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+::ng-deep{
+    app-form-elements{
+        .ng-select, .ng-select div, .ng-select input, .ng-select span {
+            box-sizing: content-box !important;
+        }
+        .ng-input input{
+            border: none !important;
+        }
+        .buttons_input .btn.btn-default{
+        margin-right: 24px;
+        }
+        .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked,
+        .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value{
+            background:  #5965f9 !important;
+            color: #fff !important;
+        }
+        .ng-select .ng-select-container:hover{
+            box-shadow: none !important;
+        }
+    }
+    .color-picker , .dp-popup , .dropdown-menu, .md-drppicker,.ng-select.ng-select-opened .ng-select-container,.ng-dropdown-panel {
+
+        z-index: 2 !important;
+    }
+}
+
+.row.row-sm.mg-b-20 .col-lg-4 .form-control,
+.form-control.ng-select
+{
+    width: 95% !important;
+}
+
+
+dp-day-calendar{
+    margin-left: -41px;
+}
+
+.ng-select ::ng-deep .ng-select-container{
+    border: none !important;
+}
+.input-group-prepend,
+.input-group-append{
+    height: 35px ;
+}
+
+@media (max-width:345px) {
+    .main-toggle.on span{
+        left: 56% !important;
+    }
+}

@@ -1,0 +1,55 @@
+
+    
+.comparison__wrapper{
+        background: #dedede;
+        position: relative;
+        text-align: center;
+        line-height: 0
+}
+.comparison__stage{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+}
+.comparison__slider{
+        background: #f2f2f2;
+        border-radius: 50%;
+        cursor: ew-resize;
+        height: 30px;
+        margin: -15px 0 0 -15px;
+        opacity: .7;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        z-index: 2
+}
+.comparison__container{
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        width: auto
+}
+.comparison__container.fixed-image img{
+    height: auto;
+    max-width: 100%
+}
+.comparison__container.slide-image{
+    border-right: 2px solid rgba(black, .5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1
+}
+.comparison__container.slide-image img{
+    height: 100%;
+    width: auto
+}
+.comparsion__image{
+    display: block;
+    vertical-align: middle
+}
+
+img{
+    max-width: initial !important;
+}

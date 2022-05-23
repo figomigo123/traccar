@@ -1,0 +1,63 @@
+//Node_modules Scss
+// @import "~material-icons/css/material-icons.scss";
+@import "~material-icons/css/material-icons.css";
+@import '~bootstrap/scss/bootstrap';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import '~leaflet/dist/leaflet.css';
+@import "~simple-datatables/dist/style.css";
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
+@import '~@swimlane/ngx-datatable/themes/dark.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+@import '~angular-notifier/styles.scss';
+@import "~angular-calendar/scss/angular-calendar.scss";
+@import "~flatpickr/dist/flatpickr.css";
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "~chartist/dist/scss/chartist.scss";
+@import "~intl-tel-input/build/css/intlTelInput.css";
+@import "~angular2-multiselect-dropdown/themes/default.theme.css";
+@import '~dropzone/dist/min/dropzone.min.css';
+@import "~flatpickr/dist/flatpickr.css";
+@import '~ngx-toastr/toastr.css';
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+@import '~angular-archwizard/archwizard.css';
+// @import '~highlight.js/scss/solarized-dark.scss';
+@import '~highlight.js/styles/github.css';
+
+// @import '~animate.css/animate.min.css';
+//Custom Scss
+@import "scss/style.scss";
+@import "css/style-dark.scss";
+@import "css/skin-modes.scss";
+@import "css/sidemenu.scss";
+
+@import "assets/plugins/sidebar/sidebar.css";
+
+
+.countdown  li{
+    background : url(./img/photos/19.jpg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    z-index: 0;
+}
+
+.countdown li:before{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: linear-gradient(135deg, rgba(67, 95, 224, 0.9) 0%, rgba(128, 57, 202, 0.9) 100%) !important;
+
+}
+
+.mdi-download, .mdi-clock , .mdi-plus{
+    margin-left: -4px !important;
+    margin-top: 12px !important;
+}

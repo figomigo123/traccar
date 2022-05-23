@@ -1,0 +1,588 @@
+::ng-deep{
+  .ant-menu-sub.ant-menu-inline
+  {
+    height: 300px;
+overflow: auto;
+  }
+  .submit {
+    color: white;
+      background: #164231 !important;;
+      font-weight: 900;
+    }
+    .ant-modal-title {
+      color: white!important;
+    }
+    .ng-star-inserted {
+    }
+    .ant-form-item-label {
+      text-align: left!important;
+    }
+  .accordion.accordion-blue .card-header button.collapsed{
+    background-color: #164231 !important;
+    color: white !important;
+  }
+  .accordion .card-header button {
+    background-color: #164231 !important;
+    color: white !important;
+  }
+  .accordion.accordion-blue .card-header button{
+    background-color: #164231 !important;
+    color: white !important;
+  }
+
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked,
+    .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value{
+        background:  #5965f9 !important;
+        color: #fff !important;
+    }
+    .ng-select .ng-select-container:hover{
+        box-shadow: none !important;
+    }
+    
+    .mdi {
+        margin-left: -4px !important;
+        margin-top: 0px !important;
+    }
+    .card-body.iconfont.text-left .flot-wrapper .apexcharts-canvas.apexcharts-theme-light svg{
+        margin-top: 20px !important;
+        width: 100% !important;
+
+    }
+    .owl-theme:after, .owl-theme:before {
+        content: "";
+        display: block;
+        bottom: 0;
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        z-index: 1;
+    }
+    .owl-theme:before {
+            top: -20px;
+            left: 0;
+            background: linear-gradient( 270deg,rgba(0,0,0,0) 0,#eaedf7);
+    }
+    .owl-theme:after {
+            top: -20px;
+            right: 0;
+            background: linear-gradient( 90deg,rgba(0,0,0,0) 0,#eaedf7);
+    }
+    .card-body.iconfont.text-left .flot-wrapper{
+        margin-top: 65px !important;
+    }
+
+    @media (max-width: 576px){
+        .card-minimal-two .nav-link {
+            padding: 8px 16px !important;
+        }
+    }
+
+
+    .input-group-append.wd-100 .ng-select-container{
+        height: 35px;
+        min-height: 35px;
+        margin-left: -2px;
+    }
+
+    .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container{
+        border-color:  #ced4da !important;
+        box-shadow: none;
+    }
+
+    .dropdown-menu{
+        z-index: 2 !important;
+    }
+    .leaflet-container{
+        z-index: 0 !important;
+    }
+
+    .accordion .card-header button.collapsed {
+        color: #596882;
+        background-color: #eeedf7;
+    }
+    
+    .accordion .card-header button {
+        color: #1c273c;
+        background-color: #eeedf7;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+    }
+    .accordion{
+        margin-bottom: 1.3rem;
+    }
+
+    .accordion.accordion-gray .card-header button.collapsed {
+        background-color: #8587a7;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .accordion.accordion-blue .card {
+        margin-bottom: 1.3rem;
+    }
+
+    .accordion.accordion-dark .card-header button.collapsed {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: #1c273c;
+    }
+    
+    .accordion.accordion-dark .card-header button, .accordion.accordion-gray .card-header button {
+        color: #1c273c;
+        background-color: #eeedf7;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+    }
+    .accordion.accordion-dark .card ,  .accordion.accordion-gray .card , .accordion.accordion-blue .card{
+        margin-bottom: 1.3rem;
+    }
+
+    .accordion.accordion-gray .card-header button.collapsed {
+        background-color: #8587a7;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .accordion.accordion-blue .card {
+        margin-bottom: 1.3rem;
+    }
+    
+    .accordion.accordion-blue .card-header button.collapsed,
+    .accordion.accordion-indigo .card-header button.collapsed
+    {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: #5965f9;
+    }
+    .accordion-blue .card-header a , .accordion-indigo .card-header a 
+    {
+        color: #5965f9;
+    }
+    
+    .accordion.accordion-blue .card-header button,
+    .accordion.accordion-indigo .card-header button {
+        color: #5965f9;
+        background-color: #eeedf7;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .btn.focus{
+        box-shadow: none;
+    }
+
+    .btn-link:focus , .btn-link:hover{
+        text-decoration: none;
+    }
+    .btn:focus, .btn.focus{
+        box-shadow: none;
+    }
+    
+
+}
+.ng-select, .ng-select div, .ng-select input, .ng-select span{
+    box-sizing: content-box !important;
+    font-size: 0.876rem;
+    padding: 0;
+}
+.card-body-top.mb-3{
+    margin-bottom: 30px;
+}
+
+.row-sm > div{
+    margin-top: 0px !important;
+}
+
+.btn-light{
+    background-color: #efeff5 !important;
+    border-color: #e5e5f1 !important;
+}
+
+.owl-item.ng-trigger.ng-trigger-autoHeight.ng-star-inserted{
+    width: 100%;
+}
+
+
+.form-control.ng-select
+{
+    width: 90% !important;
+    border: none;
+    outline: none;
+    height: 40px;
+}
+
+.card-minimal-two .nav-pills .nav-link.active {
+    border-radius: 2px;
+    color: #fff !important;
+    background-color: #5965f9 !important;
+}
+
+
+.dropdown-menu-left.dropdown-menu{
+    transform: translate(-155px,21px) !important;
+}
+
+.input-group-append.wd-100{
+    margin-right: -11px;
+}
+
+.input-group-append{
+    height: 35px;
+}
+
+table thead th {
+    border: none !important;
+}
+
+.tree { margin: 1em; }
+
+.tree input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  }
+
+.tree input ~ ul { display: none; }
+
+.tree input:checked ~ ul { display: block; }
+
+/* ————————————————————–
+  Tree rows
+*/
+.tree li {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 0 1em 1em;
+  }
+
+.tree ul li { padding: 1em 0 0 1em; }
+
+.tree > li:last-child { padding-bottom: 0; }
+
+/* ————————————————————–
+  Tree labels
+*/
+.tree_label {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  }
+
+label.tree_label { cursor: pointer; }
+
+label.tree_label:hover { color: #666; }
+
+/* ————————————————————–
+  Tree expanded icon
+*/
+label.tree_label:before {
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 1em 0 -2em;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  content: '+';
+  text-align: center;
+  line-height: .9em;
+  }
+
+:checked ~ label.tree_label:before { content: '–'; }
+
+/* ————————————————————–
+  Tree branches
+*/
+.tree li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
+  display: block;
+  width: 0;
+  border-left: 1px solid #777;
+  content: "";
+  }
+
+.tree_label:after {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: block;
+  height: 0.5em;
+  width: 1em;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #777;
+  border-radius: 0 0 0 .3em;
+  content: '';
+  }
+
+label.tree_label:after { border-bottom: 0; }
+
+:checked ~ label.tree_label:after {
+  border-radius: 0 .3em 0 0;
+  border-top: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 0;
+  border-left: 0;
+  bottom: 0;
+  top: 0.5em;
+  height: auto;
+  }
+
+.tree li:last-child:before {
+  height: 1em;
+  bottom: auto;
+  }
+
+.tree > li:last-child:before { display: none; }
+
+.tree_custom {
+  display: block;
+  background: #eee;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
+
+  
+  
+.skeleton {
+    margin-bottom: 20px;
+    --card-padding: 6px;
+    --card-height: 340px;
+    --card-skeleton: linear-gradient(rgb(180, 180, 180) var(--card-height), transparent 0);
+    
+    --avatar-size: 32px;
+    --avatar-position: var(--card-padding) var(--card-padding);
+    --avatar-skeleton: radial-gradient(circle 16px at center, lightgrey 99%, transparent 0
+    );
+    
+    --title-height: 32px;
+    --title-width: 200px;
+    --title-position: var(--card-padding) 180px;
+    --title-skeleton: linear-gradient(white var(--title-height), transparent 0);
+    
+    --desc-line-height: 16px;
+    --desc-line-skeleton: linear-gradient(white var(--desc-line-height), transparent 0);
+    --desc-line-1-width:230px;
+    --desc-line-1-position: var(--card-padding) 242px;
+    --desc-line-2-width:180px;
+    --desc-line-2-position: var(--card-padding) 265px;
+    
+    --footer-height: 40px;
+    --footer-position: 0 calc(var(--card-height) - var(--footer-height));
+    --footer-skeleton: linear-gradient(white var(--footer-height), transparent 0);
+    
+    --blur-width: 200px;
+    --blur-size: var(--blur-width) calc(var(--card-height) - var(--footer-height));
+
+    width: 100%;
+      
+    height: 43px;
+  
+    &:empty::after {
+      content:"";
+      display:block;
+      width: 100%;
+      height: 100%;
+      border-radius:6px;
+      box-shadow: 0 10px 45px rgba(0,0,0, .1);
+  
+      background-image:
+        linear-gradient(
+          90deg, 
+          rgba(lightgrey, 0) 0, 
+          rgba(lightgrey, .8) 50%, 
+          rgba(lightgrey, 0) 100%
+        ),                          //animation blur
+        var(--title-skeleton),      //title
+        var(--desc-line-skeleton),  //desc1
+        var(--desc-line-skeleton),  //desc2
+        var(--avatar-skeleton),     //avatar
+        var(--footer-skeleton),     //footer bar
+        var(--card-skeleton)        //card
+      ;
+  
+      background-size:
+        var(--blur-size),
+        var(--title-width) var(--title-height),
+        var(--desc-line-1-width) var(--desc-line-height),
+        var(--desc-line-2-width) var(--desc-line-height),
+        var(--avatar-size) var(--avatar-size),
+        100% var(--footer-height),
+        100% 100%
+      ;
+      
+      background-position:
+        -150% 0,                      //animation
+        var(--title-position),        //title
+        var(--desc-line-1-position),  //desc1
+        var(--desc-line-2-position),  //desc2
+        var(--avatar-position),       //avatar
+        var(--footer-position),       //footer bar
+        0 0                           //card
+      ;
+  
+      background-repeat: no-repeat;
+      animation: loading 1.5s infinite;
+    }
+}
+  
+  @keyframes loading {
+    to {
+      background-position:
+        350% 0,        
+        var(--title-position),  
+        var(--desc-line-1-position),
+        var(--desc-line-2-position),
+        var(--avatar-position),
+        var(--footer-position),
+        0 0
+      ;
+    }
+  }
+  
+
+  .list-group-item:hover{
+    background-color: lightgray;
+    cursor: pointer;
+  }
+
+  .selectedDevice{
+    background-color: lightgray;
+  }
+
+  .row{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .card-body2{
+    height: 87vh !important;
+    overflow-y: scroll
+  }
+
+  #leaflet1{
+    height: 81vh !important;
+  }
+
+  .btn-icon-list{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #164231;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 4px 0px;
+  }
+  
+  .header-buttons{
+    margin-left: 6px;
+  }
+
+  .right-buttons{
+    position: fixed;
+    right: 0;
+    bottom: 151px
+  }
+
+  .my-floating-button{
+    background:#164231;
+    padding: 12px 20px 12px 20px;
+    font-weight: bold;
+    z-index:15;
+    border-radius: 3px 0px 0px 3px;
+    border-radius: 5px 5px 0px 0px;
+    transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    transform-origin: bottom right;
+    margin-bottom: 100px;
+    cursor: pointer;
+  }
+
+  .my-floating-button span{
+    color: #fff;
+    transform:rotate(-90deg);
+  }
+
+  .modal-header{
+    background-color: #164231;
+    cursor: move;
+    color: white;
+  }
+
+  .modal-title{
+    color: white;
+  }
+
+  .modal-header .close{
+    color: white;
+  }
+
+  .list-word{
+    padding-left: 10px;
+  }
+
+  .online-counter{
+    padding: 15px;
+    color: white;
+    background-color: yellowgreen;
+    border: solid;
+    border-radius: 20px;
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 5px;
+  }
+
+  .offline-counter{
+    padding: 15px;
+    margin: 5px;
+    color: white;
+    background-color: tomato;
+    border: solid;
+    border-radius: 20px;
+    font-size: 16pt;
+    font-weight: bold;
+  }
+
+  .idle-counter{
+    padding: 15px;
+    margin: 5px;
+    color: white;
+    background-color: orange;
+    border: solid;
+    border-radius: 20px;
+    font-size: 16pt;
+    font-weight: bold;
+  }
+  ::ng-deep{ 
+    .ant-modal-header
+{
+    background: #164231!important;
+    color: white;
+
+}
+.ant-modal-close .ng-tns-c299-0 .ng-star-inserted{
+
+    color: white;
+}
+.accordion.accordion-blue .card-header button.collapsed{
+  background-color: #164231 !important;
+  color: white !important;
+}
+
+.accordion.accordion-blue .card-header {
+  background-color: #164231 !important;
+  color: white !important;
+}
+}
+[nz-button] {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}

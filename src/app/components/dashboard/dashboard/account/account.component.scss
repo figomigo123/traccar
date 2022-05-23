@@ -1,0 +1,175 @@
+::ng-deep{
+
+    .accordion.accordion-blue .card-header button.collapsed{
+      background-color: #164231 !important;
+      color: white !important;
+    }
+  
+    .accordion.accordion-blue .card-header button{
+      background-color: #164231 !important;
+      color: white !important;
+    }
+  
+      .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked,
+      .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value{
+          background:  #5965f9 !important;
+          color: #fff !important;
+      }
+      .ng-select .ng-select-container:hover{
+          box-shadow: none !important;
+      }
+      
+      .mdi {
+          margin-left: -4px !important;
+          margin-top: 0px !important;
+      }
+      .card-body.iconfont.text-left .flot-wrapper .apexcharts-canvas.apexcharts-theme-light svg{
+          margin-top: 20px !important;
+          width: 100% !important;
+  
+      }
+      .owl-theme:after, .owl-theme:before {
+          content: "";
+          display: block;
+          bottom: 0;
+          position: absolute;
+          width: 100px;
+          height: 100%;
+          z-index: 1;
+      }
+      .owl-theme:before {
+              top: -20px;
+              left: 0;
+              background: linear-gradient( 270deg,rgba(0,0,0,0) 0,#eaedf7);
+      }
+      .owl-theme:after {
+              top: -20px;
+              right: 0;
+              background: linear-gradient( 90deg,rgba(0,0,0,0) 0,#eaedf7);
+      }
+      .card-body.iconfont.text-left .flot-wrapper{
+          margin-top: 65px !important;
+      }
+  
+      @media (max-width: 576px){
+          .card-minimal-two .nav-link {
+              padding: 8px 16px !important;
+          }
+      }
+  
+  
+      .input-group-append.wd-100 .ng-select-container{
+          height: 35px;
+          min-height: 35px;
+          margin-left: -2px;
+      }
+  
+      .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container{
+          border-color:  #ced4da !important;
+          box-shadow: none;
+      }
+  
+      .dropdown-menu{
+          z-index: 2 !important;
+      }
+      .leaflet-container{
+          z-index: 0 !important;
+      }
+  
+      .accordion .card-header button.collapsed {
+          color: #596882;
+          background-color: #eeedf7;
+      }
+      
+      .accordion .card-header button {
+          color: #1c273c;
+          background-color: #eeedf7;
+          font-weight: 500;
+          width: 100%;
+          text-align: left;
+      }
+      .accordion{
+          margin-bottom: 1.3rem;
+      }
+  
+      .accordion.accordion-gray .card-header button.collapsed {
+          background-color: #8587a7;
+          color: rgba(255, 255, 255, 0.8);
+      }
+  
+      .accordion.accordion-blue .card {
+          margin-bottom: 1.3rem;
+      }
+  
+      .accordion.accordion-dark .card-header button.collapsed {
+          color: rgba(255, 255, 255, 0.8);
+          background-color: #1c273c;
+      }
+      
+      .accordion.accordion-dark .card-header button, .accordion.accordion-gray .card-header button {
+          color: #1c273c;
+          background-color: #eeedf7;
+          font-weight: 500;
+          width: 100%;
+          text-align: left;
+      }
+      .accordion.accordion-dark .card ,  .accordion.accordion-gray .card , .accordion.accordion-blue .card{
+          margin-bottom: 1.3rem;
+      }
+  
+      .accordion.accordion-gray .card-header button.collapsed {
+          background-color: #8587a7;
+          color: rgba(255, 255, 255, 0.8);
+      }
+  
+      .accordion.accordion-blue .card {
+          margin-bottom: 1.3rem;
+      }
+      
+      .accordion.accordion-blue .card-header button.collapsed,
+      .accordion.accordion-indigo .card-header button.collapsed
+      {
+          color: rgba(255, 255, 255, 0.8);
+          background-color: #5965f9;
+      }
+      .accordion-blue .card-header a , .accordion-indigo .card-header a 
+      {
+          color: #5965f9;
+      }
+      
+      .accordion.accordion-blue .card-header button,
+      .accordion.accordion-indigo .card-header button {
+          color: #5965f9;
+          background-color: #eeedf7;
+          font-weight: 500;
+          width: 100%;
+          text-align: left;
+      }
+      
+      .btn.focus{
+          box-shadow: none;
+      }
+  
+      .btn-link:focus , .btn-link:hover{
+          text-decoration: none;
+      }
+      .btn:focus, .btn.focus{
+          box-shadow: none;
+      }
+      
+  
+  }
+  .ng-select, .ng-select div, .ng-select input, .ng-select span{
+      box-sizing: content-box !important;
+      font-size: 0.876rem;
+      padding: 0;
+  }
+
+.body{
+    padding: 0px 300px;
+}
+
+.card-body{
+    max-height: 87vh !important;
+    overflow-y: scroll;
+}

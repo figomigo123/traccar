@@ -1,0 +1,13 @@
+::ng-deep{
+    .form-control:focus{
+        box-shadow: none;
+    }
+}
+
+.form-control{
+    height : 38px !important;
+}
+.ckbox span:before,
+.ckbox span:after{
+    top: 0 !important;
+}

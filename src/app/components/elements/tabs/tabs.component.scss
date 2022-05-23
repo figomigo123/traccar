@@ -1,0 +1,39 @@
+::ng-deep{
+    .tabs-style-1 .main-nav-line .nav-link,
+    .tabs-style-2 .main-nav-line .nav-link{
+        padding: 10px 15px;
+        margin: 2px;
+    }
+
+
+}
+
+.tab_wrapper{
+    width: 100%;
+}
+.panel.panel-primary.tabs-style-4{
+    width: 50%;
+}
+
+@media (max-width:768px) {
+    .panel.panel-primary.tabs-style-4{
+        width: 100%;
+    }
+
+    .tab_wrapper > ul {
+        display: flex;
+    }
+
+    .tab_wrapper.right_side > ul{
+        width: 100%;
+    }
+}
+
+.panel.panel-primary.tabs-style-4 .tab_wrapper > ul li{
+    padding: 0;
+}
+
+.hljs{
+    background: initial !important;
+    color: initial !important;
+}

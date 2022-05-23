@@ -1,0 +1,42 @@
+::ng-deep{
+    app-cart{
+        .lastOne .ng-dropdown-panel.ng-select-bottom{
+            transform: translate(0 , -192px);
+        }
+        .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked,
+        .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value{
+            background:  #5965f9 !important;
+            color: #fff !important;
+        }
+        .ng-select .ng-select-container:hover{
+            box-shadow: none !important;
+        }
+        
+        .ng-select-container {
+            z-index: 2 !important;
+        }
+        .ng-dropdown-panel{
+            z-index: 4 !important;
+        }
+    }
+}
+
+.ng-select.ng-select-single .ng-select-container{
+    border: 1px solid rgba($color: #fff, $alpha: 0.1);
+}
+@media (max-width:430px) {
+    .btn.btn-success.mt-2.float-right{
+        float: left !important;
+    }
+}
+
+.ng-input{
+    display: none;
+}
+
+.ng-select, .ng-select div, .ng-select input, .ng-select span{
+    padding: 0 !important;
+}
+table thead th{
+    border-bottom: none !important;
+}

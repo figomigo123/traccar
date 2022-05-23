@@ -1,0 +1,119 @@
+<div class="body">
+    <div class="card">
+        <div class="card-body">
+            <div class="main-content-label mg-b-5 pb-2">
+                Account
+            </div>
+            <div aria-multiselectable="true" class="accordion accordion-blue" id="accordion2" role="tablist">
+                <ngb-accordion [closeOthers]="false" activeIds="required">
+                    <ngb-panel id="required" title="Required">
+                        <ng-template ngbPanelContent #test>
+                            
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input class="form-control" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email" placeholder="Email" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="password" placeholder="Password" type="password" required>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="preferences" title="Preferences">
+                        <ng-template ngbPanelContent #test>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input class="form-control" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" id="phone" placeholder="Phone" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mapLayer">Map Layer</label>
+                                <ng-select class="form-control" [(ngModel)]="mapLayer" [ngModelOptions]="{standalone: true}" style="width: 100% !important;" id="mapLayer" [searchable]="true" placeholder="Map Layers">
+                                    <ng-option value="Open Street Map">Open Street Map</ng-option>
+                                    <ng-option value="Yandex Satellite">Yandex Satellite</ng-option>
+                                    <ng-option value="Yandex Map">Yandex Map</ng-option>
+                                    <ng-option value="AutoNavi">AutoNavi</ng-option>
+                                    <ng-option value="Carto Basemaps">Carto Basemaps</ng-option>
+                                    <ng-option value="Bing Maps Hybrid">Bing Maps Hybrid</ng-option>
+                                    <ng-option value="Bing Maps Aerial">Bing Maps Aerial</ng-option>
+                                    <ng-option value="Bing Maps Road">Bing Maps Road</ng-option>
+                                    <ng-option value="Custom (ArcGIS)">Custom (ArcGIS)</ng-option>
+                                    <ng-option value="Custom (XYZ)">Custom (XYZ)</ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <label for="latitude">Latitude</label>
+                                <input class="form-control" [(ngModel)]="latitude" [ngModelOptions]="{standalone: true}" id="latitude" placeholder="Latitude" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label for="longitude">Longitude</label>
+                                <input class="form-control" [(ngModel)]="longitude" [ngModelOptions]="{standalone: true}" id="longitude" placeholder="Longitude" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label for="zoom">Zoom</label>
+                                <input class="form-control" [(ngModel)]="zoom" [ngModelOptions]="{standalone: true}" id="zoom" placeholder="Zoom" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input [(ngModel)]="hourFormat12" [ngModelOptions]="{standalone: true}" type="checkbox"><span class="tx-13">12-Hour Format</span></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="coordinatesFormat">Coordinates Format</label>
+                                <ng-select class="form-control" [(ngModel)]="coordinatesFormat" [ngModelOptions]="{standalone: true}" style="width: 100% !important;" id="coordinatesFormat" [searchable]="true" placeholder="Coordinates Format">
+                                    <ng-option value="Decimal Degrees">Decimal Degrees</ng-option>
+                                    <ng-option value="Degrees Decimal Minutes">Degrees Decimal Minutes</ng-option>
+                                    <ng-option value="Degrees Minutes Seconds">Degrees Minutes Seconds</ng-option>
+                                </ng-select>
+                            </div>
+                            <div class="form-group">
+                                <label for="poiLayer">POI Layer</label>
+                                <input class="form-control" [(ngModel)]="poiLayer" [ngModelOptions]="{standalone: true}" id="poiLayer" placeholder="POI Layer" type="text" required>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="permission" title="Permission">
+                        <ng-template ngbPanelContent #test>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input disabled [(ngModel)]="disabled" [ngModelOptions]="{standalone: true}" type="checkbox"><span class="tx-13">Disabled</span></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input disabled [(ngModel)]="admin" [ngModelOptions]="{standalone: true}" type="checkbox"><span class="tx-13">Admin</span></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input disabled [(ngModel)]="readonly" [ngModelOptions]="{standalone: true}" type="checkbox"><span class="tx-13">Readonly</span></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input disabled [(ngModel)]="deviceReadonly" [ngModelOptions]="{standalone: true}" type="checkbox"><span class="tx-13">Device Readonly</span></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="ckbox mg-b-5"><input disabled [(ngModel)]="limitCommands" [ngModelOptions]="{standalone: true}" type="checkbox"><span class="tx-13">Limit Commands</span></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="expiration">Expiration</label>
+                                <input disabled class="form-control" [(ngModel)]="expiration" [ngModelOptions]="{standalone: true}" id="expiration" placeholder="Expiration" type="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="deviceLimit">Device Limit</label>
+                                <input disabled class="form-control" [(ngModel)]="deviceLimit" [ngModelOptions]="{standalone: true}" id="deviceLimit" placeholder="Device Limit" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label for="userLimit">User Limit</label>
+                                <input disabled class="form-control" [(ngModel)]="userLimit" [ngModelOptions]="{standalone: true}" id="userLimit" placeholder="User Limit" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label for="token">Token</label>
+                                <div class="input-group">
+                                    <input class="form-control" [(ngModel)]="token" [ngModelOptions]="{standalone: true}" id="token" placeholder="Token" type="text">
+                                    <span class="input-group-btn"><button class="btn btn-primary" (click)="generateToken()" type="button"><span class="input-group-btn"><i class="fas fa-sync"></i></span></button></span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+                <button class="btn btn-success btn-lg btn-block" (click)="save()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

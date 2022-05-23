@@ -1,0 +1,163 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex"><h4 class="content-title mb-0 my-auto">Charts</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Apex Charts</span></div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+
+<!-- row -->
+<div class="row row-sm">
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    AREA CHART WITH RANDOM DATA
+                </div>
+                <p class="mg-b-20">Below is the area chart with random data example.</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartLine1"></canvas> -->
+                    <apx-chart [series]="RandomData.series"  [colors]="RandomData.colors" [chart]="RandomData.chart" [annotations]="RandomData.annotations" [dataLabels]="RandomData.dataLabels" [markers]="RandomData.markers" [xaxis]="RandomData.xaxis"
+                    [tooltip]="RandomData.tooltip" [fill]="RandomData.fill">
+                    </apx-chart>
+                </div>
+            </div>
+        </div>
+    </div><!-- col-6 -->
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Area Chart
+                </div>
+                <p class="mg-b-20">Below is the area chart example.</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartArea1"></canvas> -->
+                    <apx-chart [series]="apexData.series" [colors]="apexData.colors" [chart]="apexData.chart"
+                    [dataLabels]="apexData.dataLabels" [stroke]="apexData.stroke" [xaxis]="apexData.xaxis"
+                    [tooltip]="apexData.tooltip" [legend]="apexData.legend"></apx-chart>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- col-6 -->
+
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Horizontal Bar Chart
+                </div>
+                <p class="mg-b-20">Below is the basic horizontal bar chart example.</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartArea1"></canvas> -->
+                    <apx-chart [series]="barData.series" [colors]="barData.colors" [chart]="barData.chart"
+                    [dataLabels]="barData.dataLabels" [xaxis]="barData.xaxis" [legend]="barData.legend"
+                    [plotOptions]="barData.plotOptions"></apx-chart>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Horizontal Stacked Bar Chart
+                </div>
+                <p class="mg-b-20">Below is the basic horizontal stacked bar chart example</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartArea1"></canvas> -->
+                    <apx-chart [series]="stackedbarData.series" [colors]="stackedbarData.colors"
+                    [chart]="stackedbarData.chart" [stroke]="stackedbarData.stroke" [xaxis]="stackedbarData.xaxis"
+                    [yaxis]="stackedbarData.yaxis" [legend]="stackedbarData.legend"
+                    [plotOptions]="stackedbarData.plotOptions" [tooltip]="stackedbarData.tooltip"
+                    [fill]="stackedbarData.fill"></apx-chart>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Donut Chart
+                </div>
+                <p class="mg-b-20">Below is an example of data donut chart.</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartArea1"></canvas> -->
+                    <apx-chart [series]="donutData.pieseries" [colors]="donutData.colors" [chart]="donutData.chart"
+                        [responsive]="donutData.responsive" [legend]="donutData.legend"></apx-chart>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Pie Chart
+                </div>
+                <p class="mg-b-20">Below is an example of data pie chart.</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartArea1"></canvas> -->
+                    <apx-chart [series]="pieData.pieseries" [colors]="pieData.colors" [chart]="pieData.chart"
+                            [labels]="pieData.labels" [legend]="pieData.legend" [responsive]="pieData.responsive">
+                        </apx-chart>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Radical Circle Chart
+                </div>
+                <p class="mg-b-20">Below is an example of data radical chart.</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartArea1"></canvas> -->
+                    <apx-chart [series]="radicalbarData.pieseries" [colors]="radicalbarData.colors"
+                    [chart]="radicalbarData.chart" [labels]="radicalbarData.labels"
+                    [responsive]="radicalbarData.responsive" [plotOptions]="radicalbarData.plotOptions"></apx-chart>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Radical Multiple Circle Chart
+                </div>
+                <p class="mg-b-20">Below are an example of data in a polar chart.</p>
+                <div class="chartjs-wrapper-demo">
+                    <!-- <canvas id="chartArea1"></canvas> -->
+                    <apx-chart [series]="radicalmultipleData.pieseries" [colors]="radicalmultipleData.colors"
+                        [chart]="radicalmultipleData.chart" [labels]="radicalmultipleData.labels"
+                        [plotOptions]="radicalmultipleData.plotOptions"></apx-chart>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->
+

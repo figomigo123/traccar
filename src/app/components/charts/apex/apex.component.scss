@@ -1,0 +1,21 @@
+::ng-deep{
+    @media (max-width:330px) {
+        .apexcharts-canvas.apexcharts-theme-light{
+            top: -5px;
+            left: -30px;
+        }
+    }
+
+    @media (max-width:480px) {
+        svg:nth-last-child(3) {
+            transform: translate(50px , -16px);
+            overflow: visible;
+        }
+    }
+
+    .chartjs-wrapper-demo{
+        height: auto !important;
+        width: auto !important;
+    }
+}
+

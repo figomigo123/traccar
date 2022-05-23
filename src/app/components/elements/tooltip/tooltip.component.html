@@ -1,0 +1,260 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Tooltip</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12">
+        <!-- div -->
+        <div class="card mg-b-20" id="Tooltip">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Default Tooltip
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+                <div class="main-content-label main-content-label-sm mg-b-10">
+                    Static Example
+                </div>
+                <div class="tooltip-static-demo mg-b-20">
+                    <div class="row row-sm">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="tooltip bs-tooltip-top" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the top
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                            <div class="tooltip bs-tooltip-bottom" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the bottom
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                            <div class="tooltip bs-tooltip-left" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the left
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                            <div class="tooltip bs-tooltip-right" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the right
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- tooltip-static-demo -->
+                <div class="main-content-label main-content-label-sm mg-b-10">
+                    Example
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-sm tx-center">
+                            <div class="col-sm-6 col-lg-3">
+								<button type="button" class="btn btn-primary mr-2" placement="top"
+									ngbTooltip="Tooltip on top">
+									Hover me
+								</button>
+							</div>
+                            <div class="col-sm-6 col-lg-3">
+								<button type="button" class="btn btn-primary mr-2" placement="bottom"
+									ngbTooltip="Tooltip on bottom">
+									Hover me
+								</button>
+							</div>
+                            <div class="col-sm-6 col-lg-3">
+								<button type="button" class="btn btn-primary mr-2" placement="left"
+									ngbTooltip="Tooltip on left">
+									Hover me
+								</button>
+							</div>
+                            <div class="col-sm-6 col-lg-3">
+								<button type="button" class="btn btn-primary mr-2" placement="right"
+									ngbTooltip="Tooltip on right">
+									Hover me
+								</button>
+							</div>
+                        </div>
+                    </div>
+
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tooltip1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <!-- /div -->
+
+        <!--div-->
+        <div class="card mg-b-20" id="Tooltip2">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Colored Tooltip
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website application.</p>
+                <div class="main-content-label main-content-label-sm mg-b-10">
+                    Static Example
+                </div>
+                <div class="tooltip-static-demo mg-b-20">
+                    <div class="row row-sm">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="tooltip tooltip-primary bs-tooltip-top" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the top
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                            <div class="tooltip tooltip-primary bs-tooltip-bottom" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the bottom
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                            <div class="tooltip tooltip-primary bs-tooltip-left" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the left
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                            <div class="tooltip tooltip-primary bs-tooltip-right" role="tooltip">
+                                <div class="arrow"></div>
+                                <div class="tooltip-inner">
+                                    Tooltip on the right
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- tooltip-static-demo -->
+                <div class="main-content-label main-content-label-sm mg-b-10">
+                    Example
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="bg-gray-200 pd-20">
+                            <div class="row row-sm tx-center">
+                                <div class="col-sm-6 col-lg-3">
+                                    <button type="button" class="btn btn-primary" ngbTooltip="Tooltip on top" placement="top"
+                                            tooltipClass="tooltip-primary">Hover me</button>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <button type="button" class="btn btn-primary" ngbTooltip="Tooltip on bottom" placement="bottom"
+                                            tooltipClass="tooltip-primary">Hover me</button>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <button type="button" class="btn btn-primary" ngbTooltip="Tooltip on left" placement="left"
+                                            tooltipClass="tooltip-primary">Hover me</button>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <button type="button" class="btn btn-primary" ngbTooltip="Tooltip on right" placement="right"
+                                            tooltipClass="tooltip-primary">Hover me</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tooltip2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="3">
+                                <a ngbNavLink>SCSS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="scss2" class="language-scss"></code></pre>
+                                    <div ngxClipboard [cbContent]="scss2">
+                                        <div placement="top" class="clipboard-icon" ngbTooltip="Copy To Clipboard"
+                                            container="body"><i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/div-->
+</div>
+<!-- /row -->

@@ -1,0 +1,25 @@
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #5965f9 !important;
+    border-color: #5965f9 !important;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: #5965f9;
+}
+.text-primary {
+    color: #5965f9 !important;
+}
+.hljs{
+    background: initial !important;
+    color: initial !important;
+}
+
+::ng-deep{
+    .tab-content{
+        max-height: 230px ;
+        overflow: scroll;
+    }
+}

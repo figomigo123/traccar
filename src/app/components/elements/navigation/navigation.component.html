@@ -1,0 +1,530 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Navigation</span>
+        </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+        <button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-download "></i>
+        </button>
+        <button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-clock"></i>
+        </button>
+        <button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+            <i class="mdi mdi-plus"></i>
+        </button>
+        <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card custom-card" id="basic">
+            <div class="card-body">
+                <div>
+                    <h6 class="card-title mb-1">Basic Navigation</h6>
+                    <p class="text-muted card-sub-title">Below is an example of a basic navigation</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-3 bg-light">
+                            <nav ngbNav #nav1="ngbNav" class="nav main-nav flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                    <a href="javascript:;" ngbNavLink>Home</a>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                    <a href="javascript:;" ngbNavLink>About</a>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                    <a href="javascript:;" ngbNavLink>Pages</a>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                    <a href="javascript:;" ngbNavLink>Custom</a>
+                                </ng-container>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="basic">
+                        <ul ngbNav #nav11="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav11"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card" id="vertical">
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">Vertical Navigation</h6>
+                        <p class="text-muted card-sub-title">Below is an example of a basic navigation in a vertical mode</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <div class="p-3 bg-light">
+                                <nav ngbNav #nav2="ngbNav" class="nav main-nav-column" orientation="vertical">
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Home</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Custom</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="vertical">
+                        <ul ngbNav #nav12="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav12"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card" id="pill">
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">Pills Navigation</h6>
+                        <p class="text-muted card-sub-title">Below is an example of a pill navigation</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <div class="p-3 bg-light">
+                                <nav ngbNav #nav3="ngbNav" class="nav nav-pills flex-column flex-md-row">
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Home</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Custom</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pill">
+                        <ul ngbNav #nav13="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav13"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card" id="verticallpill">
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">Vertical Pills Navigation</h6>
+                        <p class="text-muted card-sub-title">Below is an example of a pill navigation in vertical mode</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <div class="p-3 bg-light">
+                                <nav ngbNav #nav4="ngbNav" class="nav nav-pills flex-column" orientation="vertical">
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Home</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Custom</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="verticallpill">
+                        <ul ngbNav #nav14="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav14"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card" id="hori">
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">Horizontal Alignment</h6>
+                        <p class="text-muted card-sub-title">A navigation with center and right in which left is the default.</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <div class="p-3 bg-light mb-3">
+                                <nav ngbNav #nav5="ngbNav" class="nav main-nav flex-column flex-md-row justify-content-center">
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Home</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Custom</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                            <div class="p-3 bg-light">
+                                <nav ngbNav #nav6="ngbNav" class="nav main-nav flex-column flex-md-row justify-content-end">
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Home</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Custom</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="hori">
+                        <ul ngbNav #nav15="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav15"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card" id="colored">
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">Colored Nav Variations</h6>
+                        <p class="text-muted card-sub-title">A navigation with colored nav that wrapped the navigation.</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <div class="p-3 bg-primary mb-3">
+                                <nav ngbNav #nav7="ngbNav" class="nav main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Home</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Custom</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                            <div class="p-3 bg-secondary">
+                                <nav ngbNav #nav7="ngbNav" class="nav main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Home</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                        <a href="javascript:;" ngbNavLink>Custom</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="colored">
+                        <ul ngbNav #nav16="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html6"></code></pre>
+                                    <div ngxClipboard [cbContent]="html6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts6"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav16"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card" id="underline">
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">Underline Navigation</h6>
+                        <p class="text-muted card-sub-title">Below is a type of navigation that have a line at the bottom of active link.</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <div class="p-3 bg-light">
+                                <nav ngbNav #nav="ngbNav" class=" main-nav-line  flex-column flex-md-row pl-3">
+                                    <ng-container ngbNavItem>
+                                      <a ngbNavLink>Home </a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                      <a ngbNavLink>About</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                      <a ngbNavLink>Pages</a>
+                                    </ng-container>
+                                    <ng-container ngbNavItem>
+                                      <a ngbNavLink>Custome</a>
+                                    </ng-container>
+                                </nav>
+                            </div>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="underline">
+                        <ul ngbNav #nav17="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html7"></code></pre>
+                                    <div ngxClipboard [cbContent]="html7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts7"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav17"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                    </div>
+                </div>
+            </div>
+            <div class="card custom-card" id="tab">
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">Simple Tab Navigation</h6>
+                        <p class="text-muted card-sub-title">Below is a tab navigation that have only few links.</p>
+                    </div>
+                    <div class="text-wrap">
+                        <div class="example">
+                            <div class="border">
+                                <div class="bg-gray-300 nav-bg pd-15">
+                                    <nav ngbNav #nav8="ngbNav" class="nav-pills">
+                                        <ng-container ngbNavItem>
+                                            <a ngbNavLink>Home</a>
+                                            <ng-template ngbNavContent>
+                                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                            </ng-template>
+                                        </ng-container>									
+                                        <ng-container ngbNavItem>
+                                            <a ngbNavLink>About</a>
+                                            <ng-template ngbNavContent>
+                                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                            </ng-template>
+                                        </ng-container>
+                                        <ng-container ngbNavItem>
+                                            <a ngbNavLink>Contact</a>
+                                            <ng-template ngbNavContent>
+                                                <p>	At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                                                    Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                                            </ng-template>
+                                        </ng-container>
+                                    </nav>
+                                </div>
+                                <div class="card-body tab-content">
+                                    <div class="tab-pane active show">
+                                        <div [ngbNavOutlet]="nav8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tab">
+                        <ul ngbNav #nav18="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html8"></code></pre>
+                                    <div ngxClipboard [cbContent]="html8" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts8"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts8" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav18"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->
